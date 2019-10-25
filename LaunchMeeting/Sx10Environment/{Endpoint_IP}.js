@@ -2,15 +2,29 @@ const jsxapi = require('jsxapi');
 const start = console.log("App Started");
 var codecName;
 
-//locate and use this file name as the IP address for the system
+//Enter your org details here
+var WebexDomain = 'Domain';
+var WebexSip = '@'+WebexDomain+'.webex.com';
+
+//Enter you endpoint account information here
+var int_userAccountName = 'Enter Username Here'
+var int_userPassphrase = 'Enter User Pashrase here'
+
+//locate and use this file name as the IP address for the system (Windows)
+const path = require('path');
+var scriptName = path.basename(__filename);
+var ip = scriptName.slice(0, -3);
+
+/* Use this instead, if hosting on a MAC
 var path = module.filename;
 var fileName = path.substring(path.lastIndexOf('/')+1);
 var ip = fileName.slice(0, -3)
+*/
 
 //takes new 'ip' variable and inserts it here and connects to the endpoint over SSH
 const xapi = jsxapi.connect('ssh://'+ip, {
-  username: 'admin',
-  password: '1nfinityW@r$',
+  username: int_userAccountName,
+  password: int_userPassphrase,
 });
 
 //time stamp every 10 minutes for logging
@@ -30,9 +44,6 @@ xapi.on('error', (err) => {
   throw err;
 });
 //_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-\\
-
-var WebexDomain = 'Domain';
-var WebexSip = '@'+WebexDomain+'.webex.com';
 
 var ZoomDomain = 'Domain';
 
