@@ -1,0 +1,12 @@
+<Extensions>
+  <Version>1.6</Version>
+  <Panel>
+    <PanelId>launch_meeting</PanelId>
+    <Type>Home</Type>
+    <Icon>Briefing</Icon>
+    <Order>1</Order>
+    <Color>#0000FF</Color>
+    <Name>Launch Meeting</Name>
+    <ActivityType>Custom</ActivityType>
+  </Panel>
+</Extensions>
