@@ -31,6 +31,11 @@ xapi.on('error', (err) => {
 });
 //_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-\\
 
+var WebexDomain = 'Domain';
+var WebexSip = '@'+WebexDomain+'.webex.com';
+
+var ZoomDomain = 'Domain';
+
 // monitor
 xapi.event.on('CallSuccessful', (event) => {
   console.log(codecName+": Call Connected")
@@ -50,41 +55,42 @@ xapi.event.on('UserInterface Extensions Panel Clicked', (event) => {
     switch(event.PanelId){
       case 'launch_meeting':
         xapi.command('UserInterface Extensions Panel Close');
-        xapi.command('UserInterface Message Prompt Display', {Title: 'Launch Video Meeting',
-                                                               Text: 'Please choose the prefered Web Conferencing Platform',
-                                                               FeedbackID: 'home_page',
-                                                               Duration: 120,
-                                                               'Option.1': 'Webex',
-                                                               'Option.2': 'Zoom [beta]',
-                                                               'Option.3': 'Close Page',
+        xapi.command('UserInterface Message Prompt Display', {
+		Title: 'Launch Video Meeting',
+                     Text: 'Please choose the prefered Web Conferencing Platform',
+                     FeedbackID: 'home_page',
+                     Duration: 120,
+                     'Option.1': 'Zoom',
+                     'Option.2': 'Webex',
+                     'Option.3': 'Close Page',
         });
-        console.log(codecName+": Lauch meeting opened");
+        console.log(codecName+": Launch meeting opened");
     }});
 
 //listens to events from the 'home_page' prompt, and will switch between a Webex format and a Zoom format
 xapi.event.on('Userinterface Message Prompt Response', (event) =>{
   switch(event.FeedbackId + event.OptionId) {
-    case 'home_page' + '1':
+    case 'home_page' + '2':
       xapi.command('UserInterface Message TextInput Display', {
-                                  Title: 'Harvard.Webex.Com',
-                                  Text: 'Please enter in the Meeting # in your Webex invitation.        If dialing externally please include the whole Video Address.',
-                                  FeedbackId: 'webex_meeting',
-                                  Placeholder: 'Meeting#/Username',
-                                  InputType: 'SingleLine',
-                                  KeyboardState: 'Open',
-                                  SubmitText: 'Call'
+                     Title: WebexDomain+'.Webex.Com',
+                     Text: 'Please enter in the Meeting # in your Webex invitation.        If dialing externally please include the whole Video Address.',
+                     FeedbackId: 'webex_meeting',
+                     Placeholder: 'Meeting#/Username',
+                     InputType: 'SingleLine',
+                     KeyboardState: 'Open',
+                     SubmitText: 'Call'
         });
         console.log(codecName+": Webex Selected");
       break;
-    case 'home_page' + '2':
+    case 'home_page' + '1':
       xapi.command('UserInterface Message TextInput Display', {
-                                  Title: 'Harvard.Zoom.Us',
-                                  Text: 'Please enter in the Meeting ID in your Zoom invitation.      External Zoom sites may not support this device.',
-                                  FeedbackId: 'zoom_meeting',
-                                  Placeholder: 'Meeting ID',
-                                  InputType: 'Numeric',
-                                  KeyboardState: 'Open',
-                                  SubmitText: 'Call'
+                     Title: '.Zoom.Us',
+                     Text: 'Please enter in the Meeting ID in your Zoom invitation.      External Zoom sites may not support this device.',
+                     FeedbackId: ZoomDomain+'zoom_meeting',
+                     Placeholder: 'Meeting ID',
+                     InputType: 'Numeric',
+                     KeyboardState: 'Open',
+                     SubmitText: 'Call'
         });
       console.log(codecName+": Zoom Selected");
     case 'home_page' + '3':
@@ -104,7 +110,7 @@ xapi.event.on('UserInterface Message TextInput Response', (event) => {
 	          }
 	        else {
 	          xapi.command('Dial', {Number: event.Text + '@harvard.webex.com'});
-	          console.log(codecName+": Number Entered: "+event.Text+ "// '@harvard.webex.com' appended to user's string");
+	          console.log(codecName+": Number Entered: "+event.Text+ "// '@'+WebexDomain+'.webex.com' appended to user's string");
 	        }
 	       break;
 	     case 'zoom_meeting':
