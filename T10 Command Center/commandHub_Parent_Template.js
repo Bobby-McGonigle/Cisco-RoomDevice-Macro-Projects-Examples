@@ -54,19 +54,19 @@ xapi.event.on('UserInterface Extensions Widget Action', (event) => {
   if (event.Type == 'released'){
     let message = command+":"+userInput;
         switch(event.Value||event.WidgetId){
-          case 'event2':
+          case 'event1':
             device = 'room_001';
             console.log('"'+device+'"'+ " selected.");
             break;
-          case 'event3':
+          case 'event2':
             device = 'room_002';
             console.log('"'+device+'"'+ " selected.");
             break;
-          case 'event4':
+          case 'event3':
             //Additional Devices
             console.log('"'+device+'"'+ " selected.");
             break;
-          case 'event5':
+          case 'event4':
             //Additional Devices
             console.log('"'+device+'"'+ " selected.");
             break;
