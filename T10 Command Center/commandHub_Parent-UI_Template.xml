@@ -1,0 +1,102 @@
+<Extensions>
+  <Version>1.6</Version>
+  <Panel>
+    <PanelId>panel_1</PanelId>
+    <Type>Home</Type>
+    <Icon>Lightbulb</Icon>
+    <Order>2</Order>
+    <Name>Command Hub</Name>
+    <ActivityType>Custom</ActivityType>
+    <Page>
+      <Name>Command Hub</Name>
+      <Row>
+        <Name>Select Room System</Name>
+        <Widget>
+          <WidgetId>widget_9</WidgetId>
+          <Type>GroupButton</Type>
+          <Options>size=4;columns=null</Options>
+          <ValueSpace>
+            <Value>
+              <Key>event1</Key>
+              <Name>Room 1</Name>
+            </Value>
+            <Value>
+              <Key>event2</Key>
+              <Name>Room 2</Name>
+            </Value>
+            <Value>
+              <Key>event3</Key>
+              <Name>Room 3</Name>
+            </Value>
+            <Value>
+              <Key>event4</Key>
+              <Name>Room 4</Name>
+            </Value>
+          </ValueSpace>
+        </Widget>
+      </Row>
+      <Row>
+        <Name>Select Task</Name>
+        <Widget>
+          <WidgetId>widget_10</WidgetId>
+          <Type>GroupButton</Type>
+          <Options>size=4;columns=2</Options>
+          <ValueSpace>
+            <Value>
+              <Key>x001</Key>
+              <Name>Place Call</Name>
+            </Value>
+            <Value>
+              <Key>x002</Key>
+              <Name>End Call</Name>
+            </Value>
+            <Value>
+              <Key>x003</Key>
+              <Name>Join Zoom</Name>
+            </Value>
+            <Value>
+              <Key>x004</Key>
+              <Name>Set Volume</Name>
+            </Value>
+            <Value>
+              <Key>x005</Key>
+              <Name>Mute Mics</Name>
+            </Value>
+            <Value>
+              <Key>x006</Key>
+              <Name>Unmute Mics</Name>
+            </Value>
+            <Value>
+              <Key>x007</Key>
+              <Name>Start Sharing</Name>
+            </Value>
+            <Value>
+              <Key>x008</Key>
+              <Name>Stop Sharing</Name>
+            </Value>
+            <Value>
+              <Key>x009</Key>
+              <Name>Keypad/DTMF Send</Name>
+            </Value>
+          </ValueSpace>
+        </Widget>
+      </Row>
+      <Row>
+        <Name>Input Stored  ==&gt;</Name>
+        <Widget>
+          <WidgetId>commandText_Field</WidgetId>
+          <Name>Cleared</Name>
+          <Type>Text</Type>
+          <Options>size=4;fontSize=small;align=left</Options>
+        </Widget>
+        <Widget>
+          <WidgetId>execute</WidgetId>
+          <Name>Send Active Task</Name>
+          <Type>Button</Type>
+          <Options>size=4</Options>
+        </Widget>
+      </Row>
+      <Options/>
+    </Page>
+  </Panel>
+</Extensions>
