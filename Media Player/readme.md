@@ -7,7 +7,7 @@ This script is intended for Webex Room and Board series endpoints on ce9.9.X and
 Download a copy fo the script availble here call mediaPlayer.js
 Edit the ```mediaList``` variable to include all of the content you'd like to deliver to your users.
 
-### How the script work
+### How the script works
 
 * The Script will evaluate the abject array in the Media List
 ```
@@ -72,7 +72,7 @@ var mediaList = [
 
 ## Deployment
 
-There are many flavors of deployment, but I recommned using Ce-Deploy by Christopher Norman, as it's a great tool for loading this into a whole envirement quickly and easily.
+There are many flavors of deployment, but I recommned using Ce-Deploy by Christopher Norman, as it's a great tool for loading this into a whole environment quickly and easily.
 
 * [CE-Deploy](https://github.com/voipnorm/CE-Deploy)
 
@@ -91,5 +91,5 @@ There are many flavors of deployment, but I recommned using Ce-Deploy by Christo
 
 * Cisco Room Device Team
 * My End Users
-* Antoine Eduoard
-* Broderic Flannery
+* Antoine Eduoard - *Mentor*
+* Broderic Flannery - *Assisted in testing*
