@@ -15,10 +15,10 @@ Cisco Video Endpoint Macro Repository by Robert McGonigle Jr
 
 | Project | Description | 
 | :--- | :--- | 
-| Crestron and Cisco | Some projects where Cisco Room devices act as the room controller, taking charge of certain Crestron hardware and elimitating complexity | 
-| Launch Meeting | A Button that helps simplify the entry process for both Webex and Zoom (Prior to Join Webex Button) | 
-| Media Player| Grabs the Digital Signage platform by the horns, and modifies it into a User Interactable media player for Room and Board series endpoints. Get in room Docs and Videos right on the Touch 10 |
-| T10 Command Center | Use 1 telepresence system to execute commands on any number of other room systems, Great for AV control rooms and Administrative Assistants |
+| [Crestron and Cisco](https://github.com/Bobby-McGonigle/Macro-Samples/tree/master/Crestron%20and%20Cisco) | Some projects where Cisco Room devices act as the room controller, taking charge of certain Crestron hardware and elimitating complexity | 
+| [Launch Meeting](https://github.com/Bobby-McGonigle/Macro-Samples/tree/master/LaunchMeeting) | A Button that helps simplify the entry process for both Webex and Zoom (Prior to Join Webex Button) | 
+| [Media Player](https://github.com/Bobby-McGonigle/Macro-Samples/tree/master/Media%20Player)| Grabs the Digital Signage platform by the horns, and modifies it into a User Interactable media player for Room and Board series endpoints. Get in room Docs and Videos right on the Touch 10 |
+| [T10 Command Center](https://github.com/Bobby-McGonigle/Macro-Samples/tree/master/T10%20Command%20Center) | Use 1 telepresence system to execute commands on any number of other room systems, Great for AV control rooms and Administrative Assistants |
 
 ## Check out other **AWESOME!** Projects in the Github Community!
 
