@@ -22,7 +22,8 @@ Edit the ```mediaList``` variable to include all of the content you'd like to de
 * Based on the object array and it's content, the script will build the XML needed for each row and page.
   * Each Page will be based off the category provided
   * Each row will populate in thier respective page, providing a button and information for the user
-* After the mediaList object array has been sorted through, a new Panel will be pushed onto the Touch 10
+* After the mediaList object array has been sorted through, a new Panel will be pushed onto the Touch 10, similar to the one below.
+![exampleUI.png](https://github.com/Bobby-McGonigle/Macro-Samples/blob/master/Media%20Player/exampleUI.PNG)
 * From there, the UI elements should start working based on the information you have provided in the script
 
 ### Example format
