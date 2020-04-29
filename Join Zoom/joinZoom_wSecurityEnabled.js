@@ -12,7 +12,7 @@ var JZ_Button = {
 //Call information needed to automate the JoinZoom functionanlity.
 ////Update the 'domain' to match your instnace.
 var JZ_callInformation = {
-    domain: 'Harvard',
+    domain: 'Domain',
     sipPattern: '@zoomcrc.com',
     meetingNumber: null,
     hostKey: null,
@@ -89,7 +89,7 @@ xapi.status.on('Call RemoteNumber', (remoteNumber) => {
 //Used to reset the Call information Variable after each call.
 xapi.event.on('CallDisconnect', (event) => {
     JZ_callInformation = {
-        domain: 'Harvard',
+        domain: 'Domain',
         sipPattern: '@zoomcrc.com',
         meetingNumber: null,
         hostKey: null,
