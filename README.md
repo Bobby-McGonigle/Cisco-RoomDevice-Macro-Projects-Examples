@@ -19,6 +19,8 @@ Cisco Video Endpoint Macro Repository by Robert McGonigle Jr
 | [Launch Meeting](https://github.com/Bobby-McGonigle/Macro-Samples/tree/master/LaunchMeeting) | A Button that helps simplify the entry process for both Webex and Zoom (Prior to Join Webex Button) | 
 | [Media Player](https://github.com/Bobby-McGonigle/Macro-Samples/tree/master/Media%20Player)| Grabs the Digital Signage platform by the horns, and modifies it into a User Interactable media player for Room and Board series endpoints. Get in room Docs and Videos right on the Touch 10 |
 | [T10 Command Center](https://github.com/Bobby-McGonigle/Macro-Samples/tree/master/T10%20Command%20Center) | Use 1 telepresence system to execute commands on any number of other room systems, Great for AV control rooms and Administrative Assistants |
+|[Macro Memory Storage](https://github.com/Bobby-McGonigle/Macro-Samples/tree/master/Macro%20Memory%20Storage)| A good way to store some information on the endpoint for safe keeping, and a good way to make use of every configuration item, even if you son't need it :)|
+|[Join Zoom](https://github.com/Bobby-McGonigle/Macro-Samples/tree/master/Join%20Zoom)| Several variations of an entry way for Dialing into SIP enabled Zoom sessions (Has since replaced my beloved LaunchMeeting)|
 
 ## Check out other **AWESOME!** Projects in the Github Community!
 
