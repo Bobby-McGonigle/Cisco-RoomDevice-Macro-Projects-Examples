@@ -151,6 +151,18 @@ function getMemInformation() {
     });
 }
 
+function memoryCapacity() {
+    let percentage;
+    let X;
+    let Y;
+    xapi.config.get('FacilityService Service 5 Name').then((config) => {
+        X = [(config.length)/1024]*100;
+        Y = [Math.round(X*100)/100];
+        percentage = Y;
+          console.log('Memory Capacity used: '+ percentage + '%');
+    });
+}
+
 getMemInformation();
 
 /*
@@ -190,7 +202,8 @@ function updateMemBlock(newInfo, targetBlock) {
                 mem[targetBlock].value = newInfo;
                 xapi.config.set('FacilityService Service 5 Name', memChain());
                 if (lastStore !== newInfo) {
-                    console.log('Memory Update ==> Block_Id: "' + mem[targetBlock].id + '" changed from: "' + lastStore + '" to: "' + newInfo + '"');
+                    console.log('Memory Update ==> Block_Id: "' + mem[targetBlock].id + '" changed from: "' + lastStore + '" to: "' + newInfo +'.');
+                    memoryCapacity();
                 }
                 break;
         }
@@ -208,29 +221,31 @@ NOTE: This script can be modified to include more memory blocks, or less as need
     (1024-10)/10 = ~101 characters per block
 */
 
+
+
 var testBlock = true;
 
 if (testBlock === true) {
-    updateMemBlock('true', 'block_0');
-    updateMemBlock('2', 'block_1');
-    updateMemBlock('3', 'block_2');
-    updateMemBlock('4', 'block_3');
-    updateMemBlock('5', 'block_4');
-    updateMemBlock('6', 'block_5');
-    updateMemBlock('7', 'block_6');
-    updateMemBlock('8', 'block_7');
-    updateMemBlock('9', 'block_8');
-    updateMemBlock('10', 'block_9');
-    updateMemBlock('11', 'block_10');
-    updateMemBlock('12', 'block_11');
-    updateMemBlock('13', 'block_12');
-    updateMemBlock('14', 'block_13');
-    updateMemBlock('15', 'block_14');
-    updateMemBlock('16', 'block_15');
-    updateMemBlock('17', 'block_16');
-    updateMemBlock('18', 'block_17');
-    updateMemBlock('19', 'block_18');
-    updateMemBlock('20', 'block_19');
+    updateMemBlock('1', 'block_0');
+    updateMemBlock('200', 'block_1');
+    updateMemBlock('300', 'block_2');
+    updateMemBlock('400', 'block_3');
+    updateMemBlock('005', 'block_4');
+    updateMemBlock('600', 'block_5');
+    updateMemBlock('700', 'block_6');
+    updateMemBlock('800', 'block_7');
+    updateMemBlock('900', 'block_8');
+    updateMemBlock('100', 'block_9');
+    updateMemBlock('200', 'block_10');
+    updateMemBlock('300', 'block_11');
+    updateMemBlock('400', 'block_12');
+    updateMemBlock('500', 'block_13');
+    updateMemBlock('600', 'block_14');
+    updateMemBlock('700', 'block_15');
+    updateMemBlock('800', 'block_16');
+    updateMemBlock('900', 'block_17');
+    updateMemBlock('100', 'block_18');
+    updateMemBlock('200', 'block_19');
 } else {
     updateMemBlock('a', 'block_0');
     updateMemBlock('b', 'block_1');
