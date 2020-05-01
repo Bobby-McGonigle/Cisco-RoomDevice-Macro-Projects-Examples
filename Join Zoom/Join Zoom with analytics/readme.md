@@ -85,7 +85,7 @@ Adding in, and Modyifing the JoinZoom with Analytics Script
  * Save your script
  * Load this into the Endpoint's Macro Editor
  * Save and enable the script
- * A more in depth review of the script will be provided at a later date.
+ * A more in depth review of the Macro script will be provided at a later date.
  
  **NOTE**: Like my the original [joinZoom.js](https://github.com/Bobby-McGonigle/Macro-Samples/blob/master/Join%20Zoom/joinZoom.js) file, this script will generate the Button onto the T10 for you, if you had used other versions of this script, be sure to disable that macro and delete that the Panel button from thenUI Extensions editor.
  
