@@ -87,7 +87,7 @@ Adding in, and Modyifing the JoinZoom with Analytics Script
  * Save and enable the script
  * A more in depth review of the Macro script will be provided at a later date.
  
- **NOTE**: Like my the original [joinZoom.js](https://github.com/Bobby-McGonigle/Macro-Samples/blob/master/Join%20Zoom/joinZoom.js) file, this script will generate the Button onto the T10 for you, if you had used other versions of this script, be sure to disable that macro and delete that the Panel button from thenUI Extensions editor.
+ **NOTE**: Like my the original [Join Zoom (Basic)](https://github.com/Bobby-McGonigle/Macro-Samples/tree/master/Join%20Zoom/Join%20Zoom%20(Basic)) file, this script will generate the Button onto the T10 for you, if you had used other versions of this script, be sure to disable that macro and delete that the Panel button from thenUI Extensions editor.
  
  ### Step 4
  Testing
@@ -107,7 +107,7 @@ After a successful run, and the table starts to fill, try other call destination
 **NOTE**: The ```JoinZoom_Button``` method will only trigger if using the Join Zoom button. If you call into a Zoom meeting with the Native Call Button, then the method will show ```zoomcrc.com```. This is important to note, because the goal of this analysis was to determine which interface was being used for calling.
 
 ## What to do from here?
-Well I didn't tell you how to organize your data in the spreadsheet, or make any nice looking graphs like these
+Well I didn't tell you how to organize your data in the spreadsheet, or make any graphs like these
 ![Nice Looking Graphs](https://github.com/Bobby-McGonigle/Macro-Samples/blob/master/Join%20Zoom/Join%20Zoom%20with%20analytics/images/09_Tables%20Made.png)
 But I hope this example serves as a good starting point for collecting Data for your Custom elements that don't show in TMS, CUCM, or Webex Control Hub
 
