@@ -114,7 +114,7 @@ Please Download the following Scripts prior to starting:
 * Adjust the system config to allow to enable the HTTP Client and allow for insecure HTTPS
 
 ## Things to consider
-* This script did not account for all neccessay control features, as this particular ask had no need for Camera control and other features found on Room Devices.
+* This script did not account for all neccessary control features, as this particular ask had no need for Camera control and other features found on Room Devices.
 * Depending on your need, you may need  to change UI, parent and child scripts to add in any missing elements for your use case.
 
 
