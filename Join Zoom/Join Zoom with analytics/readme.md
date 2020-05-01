@@ -125,7 +125,7 @@ But I hope this example serves as a good starting point for collecting Data for 
 
 ## Deployment
 
-There are many flavors of deployment, but I recommned using Ce-Deploy by Christopher Norman, as it's a great tool for loading this into a whole environment quickly and easily.
+There are many flavors of deployment, but I recommend using Ce-Deploy by Christopher Norman, as it's a great tool for loading this into a whole environment quickly and easily.
 
 * [CE-Deploy](https://github.com/voipnorm/CE-Deploy)
 
