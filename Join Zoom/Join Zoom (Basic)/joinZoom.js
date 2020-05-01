@@ -28,7 +28,7 @@ xapi.event.on('UserInterface Extensions Panel Clicked', (event) => {
       case 'pure_Zoom':
         xapi.command('UserInterface Message TextInput Display', {
                      Title: 'Join Zoom Meeting',
-                     Text: 'Enter the Meeting ID and tap Join.<p> Want your own Zoom account? Go to +zoomDomain.toLowerCase()+.zoom.us',
+                     Text: 'Enter the Meeting ID and tap Join.<p> Want your own Zoom account? Go to '+zoomDomain.toLowerCase()+'.zoom.us',
                      FeedbackId: 'zoom2.0',
                      Placeholder: 'Meeting ID',
                      InputType: 'Numeric',
