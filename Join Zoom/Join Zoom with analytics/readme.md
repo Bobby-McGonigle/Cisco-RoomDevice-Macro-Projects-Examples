@@ -92,9 +92,56 @@ Adding in, and Modyifing the JoinZoom with Analytics Script
  * Load this into the Endpoint's Macro Editor
  * Save and enable the script
  
- **NOTE**: Like my the original joinZoom.js file, this script will generate the Button onto the T10 for you, if you had used other versions of this script, be sure to disable that macro, and delete that the Panel button from thenUI Extensions editor
+ **NOTE**: Like my the original [joinZoom.js](https://github.com/Bobby-McGonigle/Macro-Samples/blob/master/Join%20Zoom/joinZoom.js) file, this script will generate the Button onto the T10 for you, if you had used other versions of this script, be sure to disable that macro and delete that the Panel button from thenUI Extensions editor.
  
+ ### Step 4
+ Testing
  
+ Now that you have a Video endpoint with the proper script, and you have a Flow created, its time to test it
+ 
+ * Go back to your flow page, in the top right select Test
+  * Perform the test yourself and select Test
+  * ![Testing](https://github.com/Bobby-McGonigle/Macro-Samples/blob/master/Join%20Zoom/Join%20Zoom%20with%20analytics/images/flowTest.PNG)
+ * On your Video Endpoint, place a call from either the Call Menu or the Join Zoom button
+  * Once the call connects, it will send a post out to Power automate and your flow will run.
+   * The flow will tell you if it succeeded or failed,
+    * Be sure to review to make sure there were no errors.
 
+After a successful run, and the table starts to fill, try other call destinations like Webex, BlueJeans, Selfie.VC, Etc to be sure you're seeing the Different Methods being called
 
+**NOTE**: The ```JoinZoom_Button``` method will only trigger if using the Join Zoom button. If you call into a Zoom meeting with the Native Call Button, then the method will show ```zoomcrc.com```. This is important to note, because the goal of this analysis was to determine which interface was being used for calling.
+
+## What to do from here?
+Well I didn't tell you how to organize your data in the spreadsheet, or make any nice looking graphs like these
+![Nice Looking Graphs](https://github.com/Bobby-McGonigle/Macro-Samples/blob/master/Join%20Zoom/Join%20Zoom%20with%20analytics/images/09_Tables%20Made.png)
+But I hope this example serves as a good starting point for collecting Data for your Custom elements that don't show in TMS, CUCM, or Webex Control Hub
+
+## Things to consider
+
+* This example is not limited to Power Automate as a tool
+* This concept could easily work for any other platform that can receive information over HTTP
+* I used power automate, because it's simple to use and was available to me
+
+## Use Case examples
+
+* Collecting information for usage as we had done above
+* User Satifaction Surveys
+* Resevoir to store information to GET, rather than POST
+* Probably more too, Power Automate has A LOT of integrations, I suggest you explore.
+
+## Deployment
+
+There are many flavors of deployment, but I recommned using Ce-Deploy by Christopher Norman, as it's a great tool for loading this into a whole environment quickly and easily.
+
+* [CE-Deploy](https://github.com/voipnorm/CE-Deploy)
+
+## Author(s)
+
+* **Robert McGonigle Jr**
+
+## Acknowledgments
+
+* Cisco Room Device Team
+* My End Users
+* Antoine Eduoard - *Mentor*
 
