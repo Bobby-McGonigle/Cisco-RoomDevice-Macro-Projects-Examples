@@ -11,6 +11,11 @@ Fortunatley enough, the Sx10 can handle a Touch 10 paired to it and can support 
     * I know, the Room Kit Mini in all my spaces would be great, but politics and well "We Gotta Allotta" Sx10s to handle
     * So, yeah I want a mini, but I need make the best situation with what I got, and i have some room on a server :smiley:
 
+## Keep an Open Mind
+* Though we will be covering how to add in the JoinZoom button to Sx10, this method is pretty much an External Macro Environment for your endpoints.
+* So long as the API is supported on the Sx10, you can do it here! :smiley:
+* Your only limits are your imagination and End-of-Support notices lol
+
 ## What You'll Need
 
 * Cisco Room device on ce 9.8.X or greater (Works on Cloud registered endpoints too)
