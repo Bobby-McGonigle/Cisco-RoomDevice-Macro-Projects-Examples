@@ -26,7 +26,7 @@ A simple, user approachable way to enter a meeting.
     * Our example will make use of SSH, not the Websocket, though both are applicable
   * about 50Mb of ram per endpoint
 * additional software (Node.Js, pm2)
-* Adding JoinZoom to Sx10s will be talked about breifly here, but you can find more in-depth information here [Join Zoom with Sx10's]()
+* Adding JoinZoom to Sx10s will be talked about breifly here, but you can find more in-depth information here [Join Zoom with Sx10's](https://github.com/Bobby-McGonigle/Macro-Samples/tree/master/Join%20Zoom/Join%20Zoom%20(Basic)/Connect%20Sx10s%20Too)
 
 ## How does the script work?
 
@@ -76,6 +76,7 @@ Testing
   * Do your best to make tools as Universal as possible
     * I may have gotten a complaint or 2 when this button did not exist for a user for this exact button
      * "Oh Live trials, how they intefere with full deployments" :smiley:
+     * Check out how to add [Join Zoom with Sx10's](https://github.com/Bobby-McGonigle/Macro-Samples/tree/master/Join%20Zoom/Join%20Zoom%20(Basic)/Connect%20Sx10s%20Too) too!
 * This is a very basic, but successful user experience
 * The UI Button is created in the Macro Script itself on lines 10-24
   * ```javascript
