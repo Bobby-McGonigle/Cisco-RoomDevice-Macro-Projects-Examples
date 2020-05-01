@@ -32,12 +32,6 @@ Creating our Excel Table
 * Create a new Excel sheet online
 * Name it something that makes Sense to you, and your data collection mission
 * Create a table with the following collums
-  * Date
-  * Time
-  * Name
-  * IP
-  * Mac
-  * Call Method
   ![Example Table](https://github.com/Bobby-McGonigle/Macro-Samples/blob/master/Join%20Zoom/Join%20Zoom%20with%20analytics/images/08_Excel%20Table.png)
 * Save your document, and move over to MicroSoft Power Automate
 
