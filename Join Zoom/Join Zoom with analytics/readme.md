@@ -47,20 +47,20 @@ Here is an example image of the Flow we're going to build from the Top Down
 #### From Top down, we will use the following flow tools
   * When an HTTP Request is received
     * This is the Trigger to your flow
-    * This is where our Room Device will make an HTTP Post with a full pauload of information
-    * Once this tool is built out and the flow is save, it will create a URL which you'll need to copy and use later in this tool.
+    * This is where our Room Device will make an HTTP Post with a full payload of information
+    * Once this tool is built out and the flow is saved, it will create a URL which you'll need to copy and use later in the Macro Script.
       * This URL is what your Room Device will post too.
       ![When an HTTP Request is received](https://github.com/Bobby-McGonigle/Macro-Samples/blob/master/Join%20Zoom/Join%20Zoom%20with%20analytics/images/03_HTTP%20Request%20Received.png)
   * Next in the flow is the Control Condition
     * This control condition can be used for all sorts or processes, but we're going to uuse it to set up some base authentication
-    * Were goint to evaluate if our auth object matches the correct authentication in the flow.
+    * Were goint to evaluate if our auth object is equal to the correct authentication in the flow.
       * If it passes, them we'll execute an update to our table
       * If it failes, we'll send an Email to ourselves
       ![Control Condition](https://github.com/Bobby-McGonigle/Macro-Samples/blob/master/Join%20Zoom/Join%20Zoom%20with%20analytics/images/04_Check%20Credentials.png)
         * #### The control Passes
           * We first send back a 200 repsonse to let the Room Device know everthing is A-Ok!
             ![Pass Authentication](https://github.com/Bobby-McGonigle/Macro-Samples/blob/master/Join%20Zoom/Join%20Zoom%20with%20analytics/images/05_HTTP%20Response.png)
-          * Then We will insert a row into our Table with all the information we gathered from the payload
+          * Then we will insert a row into our Table with all the information we gathered from the payload
             ![Add a Row tp a Table](https://github.com/Bobby-McGonigle/Macro-Samples/blob/master/Join%20Zoom/Join%20Zoom%20with%20analytics/images/06_Add%20Row%20to%20Table.png)
         * #### The control Failes
            * We First send back a 401 response, to let the endpoint know we failed the Authentication Check
@@ -95,10 +95,10 @@ Adding in, and Modyifing the JoinZoom with Analytics Script
  
  * Go back to your flow page, in the top right select Test
   * Perform the test yourself and select Test
-  * ![Testing](https://github.com/Bobby-McGonigle/Macro-Samples/blob/master/Join%20Zoom/Join%20Zoom%20with%20analytics/images/flowTest.PNG)
+      * ![Testing](https://github.com/Bobby-McGonigle/Macro-Samples/blob/master/Join%20Zoom/Join%20Zoom%20with%20analytics/images/flowTest.PNG)
  * On your Video Endpoint, place a call from either the Call Menu or the Join Zoom button
   * Once the call connects, it will send a post out to Power automate and your flow will run.
-   * The flow will tell you if it succeeded or failed,
+   * The flow will tell you if it succeeded or failed
     * Be sure to review to make sure there were no errors.
 
 After a successful run, and the table starts to fill, try other call destinations like Webex, BlueJeans, Selfie.VC, Etc to be sure you're seeing the Different Methods being called
