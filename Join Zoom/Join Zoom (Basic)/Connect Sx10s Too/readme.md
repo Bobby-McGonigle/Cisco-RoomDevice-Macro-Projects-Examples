@@ -43,7 +43,7 @@ I think this will work on linux too, so you should be able to get this up and ru
   * In the event that the Sx10 loses connectivity to the environment, that we're about to build, this default splash screen should appear
     * ![Sx10_Error](https://github.com/Bobby-McGonigle/Macro-Samples/blob/master/Join%20Zoom/Join%20Zoom%20(Basic)/Connect%20Sx10s%20Too/02_JoinZoom_Error.png)
   * If the environment is deployed successfully, then it should hide away this default message, and open the Join Zoom button that we expect
-    * The benefit of this screen, is that is hould hopefully guide users in contacting you and making use of the native call button if there is an issue.
+    * The benefit of this screen, is that is would hopefully guide users in contacting you and making use of the native call button if there is an issue.
 
 ## Getting Started
 
@@ -110,7 +110,7 @@ Creating your Endpoint Script(s)
         var fileName = path.substring(path.lastIndexOf('/')+1);
         var ip = fileName.slice(0, -3)
         ```
-    * Wish I had a method for Linux users, but i'm confident you'll figure this out :smiley:
+    * Wish I had a method for Linux users, but I'm confident you'll figure this out :smiley:
     * Please be Mindful
   * **What's great about using this method, is that all scripts can be Identical, rather than inserting an IP into each script**
   
@@ -220,7 +220,7 @@ Before we move onto the deployment
 * You should see you new systems come in
 
 **NOTE**: I have 85 systems in my environment, it's about 5 minutes of downtime, so plan accordingly
-* Reveiwing the [PM2's SITE](https://pm2.keymetrics.io/docs/usage/quick-start/) will also show you other methods of updating, this is just one way.
+* Reviewing the [PM2's SITE](https://pm2.keymetrics.io/docs/usage/quick-start/) will also show you other methods of updating, this is just one way.
 
 ## How would I know if the Endpoint is Successful?
 * The JoinZoom button should show up on the Touch 10 for each Sx10
@@ -233,8 +233,15 @@ Before we move onto the deployment
 * Computer updates/restarts can bring down your environment, be sure to build up some tools to kick it back on
 * Not just a tool fro Sx10's, You can place your whole environment on this, it should work with Sx, Mx, Dx, Room and Board series endpoints
 * There is so much that could be added to improve this
-* **REVIEW [PM2's SITE](https://pm2.keymetrics.io/docs/usage/quick-start/), It's going to teach you alot**
+* **REVIEW [PM2's SITE](https://pm2.keymetrics.io/docs/usage/quick-start/), It's going to teach you a lot**
 
+## Author(s)
 
+* **Robert McGonigle Jr**
 
+## Acknowledgments
 
+* Cisco Room Device Team
+* Special Thanks to the Node.Js, pm2, and the JSXAPI
+* My End Users
+* Antoine Eduoard - *Mentor*
