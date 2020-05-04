@@ -27,7 +27,7 @@ So thanks to product adds in my email and my overwhelming excitement for this id
 
 ## What You'll Need
 * **A Project in Mind**
-  * Fun project to do, but really worth your while with a project in mind
+  * A Fun project to do on its own, but really worth your while with a project in mind
 * Cisco Room Series or Board Series endpoint (Though supported, my Dx80 crashed, so I'd stick to the Room and Board series, haven't fully tested the Sx or Mx series)
 * Admin Access
 * Some knowledge on the xApi
