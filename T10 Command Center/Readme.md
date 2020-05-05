@@ -14,7 +14,7 @@ User group wanted a way to control several Cisco Room Devices systems from a sin
 
 ## How the script works
 * The parent system will post a message to the child system with a single single string of information.
-* This information includes the Type of command to be executed by the child system, and any acompanying User Input that may be needed.
+* This information includes the Type of command to be executed by the child system, and any accompanying User Input that may be needed.
   * For example, in order to place a call, the Parent endpoint would receive a number entered by the user and append it to ```001```
   * This new string would be sent to the endpoint as ```001:someNumber```
   * The child endpoint would see that ```001``` is a dial command, and use the ```someNumber``` user information to place a call a call upon receiving it.
@@ -23,7 +23,7 @@ User group wanted a way to control several Cisco Room Devices systems from a sin
 ## How to operate the UI
 * Select the target room system
 * Select the task to send to that system
-  * If prompted, provide the neccessary information, such as Dial String, DTMF, Volume, Et.
+  * If prompted, provide the necessary information, such as Dial String, DTMF, Volume, Et.
 * When complete, you will see the information you entered in the "Input Stored ===>" row
 * When ready to execute the command, press "Send Active Task
 
@@ -32,7 +32,7 @@ User group wanted a way to control several Cisco Room Devices systems from a sin
 
 ## Prerequisites
 * 2 or more Macro compatible Cisco Room Devices
-  * The Sx10 could be compatible if making use of the jsxapi library and an intermediary system
+  * The Sx10 could be compatible if making use of the JSXAPI library and an intermediary system
 * The 2+ systems can communicate over HTTPS in your network environment
 * Admin access
 * Some knowledge of the Macro Environment
@@ -50,26 +50,26 @@ Please Download the following Scripts prior to starting:
   * [commandHub_Child_Template.js](https://github.com/Bobby-McGonigle/Macro-Samples/blob/master/T10%20Command%20Center/commandHub_Child_Template.js)
 
 ### Step 1 - Modify the Parent Script (commandHub_Parent_Template.js)
-* The Parent script will need the neccessary information to connect over the netwrok to the child system
+* The Parent script will need the necessary information to connect over the network to the child system
   * On Line 27, you'll find ```const = devices``` and a list of example devices here
-  
-  ```javascript
-  const devices = {
-                  'default':   {'Url': 'https://x.x.x.x/putxml',
-                                'Header': [defaults.xml, defaults.auth + 'YWRtaW46'],
-                                'AllowInsecureHTTPS': defaults.https},
 
-                  'room_001':   {'Url': 'https://'+{/*Enter Device IP Here*/}+'/putxml',
-                                'Header': [defaults.xml, defaults.auth + {/*Enter Device base64 Authentication Credentials Here*/}],
-                                'AllowInsecureHTTPS': defaults.https},
 
-                  'room_002':   {'Url': 'https://'+{/*Enter Device IP Here*/}+'/putxml',
-                                'Header': [defaults.xml, defaults.auth + {/*Enter Device base64 Authentication Credentials Here*/}],
-                                'AllowInsecureHTTPS': defaults.https}
-}```
+```javascript
+      const devices = {
+                      'default':   {'Url': 'https://x.x.x.x/putxml',
+                                    'Header': [defaults.xml, defaults.auth + 'YWRtaW46'],
+                                    'AllowInsecureHTTPS': defaults.https},
+
+                      'room_001':   {'Url': 'https://'+{/*Enter Device IP Here*/}+'/putxml',
+                                    'Header': [defaults.xml, defaults.auth + {/*Enter Device base64 Authentication Credentials Here*/}],
+                                    'AllowInsecureHTTPS': defaults.https},
+
+                      'room_002':   {'Url': 'https://'+{/*Enter Device IP Here*/}+'/putxml',
+                                    'Header': [defaults.xml, defaults.auth + {/*Enter Device base64 Authentication Credentials Here*/}],
+                                    'AllowInsecureHTTPS': defaults.https}
+    }
+```
  
-
-
   * This is structured example of the information you'll need in order to connect to the child system
     * I recommend you leave defaults as is, since it's good to have as a reference.
   * Edit room_001 & room_002 to contain the IP and admin credentials needed to work with this script
@@ -77,20 +77,24 @@ Please Download the following Scripts prior to starting:
     * This is "admin" written in base64
     * [base64encode.org](https://www.base64encode.org/) is a great tool
       * When encoding to base64, your username and password should be formated like so ```username:password```
-* The last peice you'll need to edit in this script is the Switch Case values for room_01 and room_02
+* The last piece you'll need to edit in this script is the Switch Case values for room_01 and room_02
   * Change these cases to match the new names of the devices you inserted. If you chose to keep room_01 and room_02 as the naming convention, please disregard this instruction.
-  ```xapi.event.on('UserInterface Extensions Widget Action', (event) => {
-  if (event.Type == 'released'){
-    let message = command+":"+userInput;
-        switch(event.Value||event.WidgetId){
-          case 'event1':
-            device = 'room_001';
-            console.log('"'+device+'"'+ " selected.");
-            break;
-          case 'event2':
-            device = 'room_002';
-            console.log('"'+device+'"'+ " selected.");
-            break;```
+  
+```javascript
+      xapi.event.on('UserInterface Extensions Widget Action', (event) => {
+          if (event.Type == 'released'){
+            let message = command+":"+userInput;
+                switch(event.Value||event.WidgetId){
+                  case 'event1':
+                    device = 'room_001';
+                    console.log('"'+device+'"'+ " selected.");
+                    break;
+                  case 'event2':
+                    device = 'room_002';
+                    console.log('"'+device+'"'+ " selected.");
+                    break;
+```
+
 * Feel free to continue to add in devices to expand how many you'd like to control from the parent system.
 
 ### Step 2 - Load in the Modified Parent Script
@@ -114,13 +118,13 @@ Please Download the following Scripts prior to starting:
 * Adjust the system config to allow to enable the HTTP Client and allow for insecure HTTPS
 
 ## Things to consider
-* This script did not account for all neccessary control features, as this particular ask had no need for Camera control and other features found on Room Devices.
+* This script did not account for all necessary control features, as this particular ask had no need for Camera control and other features found on Room Devices.
 * Depending on your need, you may need  to change UI, parent and child scripts to add in any missing elements for your use case.
 
 
 ## Deployment
 
-There are many flavors of deployment, but I recommned using Ce-Deploy by Christopher Norman, as it's a great tool for loading this into a whole environment quickly and easily.
+There are many flavors of deployment, but I recommend using Ce-Deploy by Christopher Norman, as it's a great tool for loading this into a whole environment quickly and easily.
 
 * [CE-Deploy](https://github.com/voipnorm/CE-Deploy)
 
