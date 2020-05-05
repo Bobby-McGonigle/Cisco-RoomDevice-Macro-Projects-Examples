@@ -4,15 +4,17 @@ const xapi = require('xapi');
 
 //Properties of the 'JoinZoom' Custom Button
 var JZ_Button = {
-    color: '#000000', //#2d8bff is the offical Zoom Color
+    color: '#000000', //#2d8bff is the official Zoom Color
     icon: 'Briefing', //Briefing; Camera
     text: 'Join Zoom'
 };
 
-//Call information needed to automate the JoinZoom functionanlity.
-////Update the 'domain' to match your instnace.
+var zoomDomain = "Domain"
+
+//Call information needed to automate the JoinZoom functionality.
+////Update the 'domain' to match your instance.
 var JZ_callInformation = {
-    domain: 'Domain',
+    domain: zoomDomain,
     sipPattern: '@zoomcrc.com',
     meetingNumber: null,
     hostKey: null,
@@ -89,7 +91,7 @@ xapi.status.on('Call RemoteNumber', (remoteNumber) => {
 //Used to reset the Call information Variable after each call.
 xapi.event.on('CallDisconnect', (event) => {
     JZ_callInformation = {
-        domain: 'Domain',
+        domain: zoomDomain,
         sipPattern: '@zoomcrc.com',
         meetingNumber: null,
         hostKey: null,
