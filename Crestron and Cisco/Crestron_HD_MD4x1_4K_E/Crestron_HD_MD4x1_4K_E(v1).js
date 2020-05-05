@@ -3,7 +3,7 @@ const xapi = require('xapi');
 var Crestron_HD_MD4x1_4K_E_ip = 'Enter Switcher IP here';
 
 //Source Type information
-// Choose one of the following to to use [Note: Case Sensative]
+// Choose one of the following to to use [Note: Case Sensitive]
 // pc/camera/desktop/document_camera/mediaplayer/other/whiteboard
 
 var inputType_SourceIn_1 = 'pc';
@@ -13,7 +13,7 @@ var inputType_SourceIn_4 = 'whiteboard';
 
 
 //---Do Not Change the Following ---\\
-// Unles you're super confident on those changes ;)
+// Unless you're super confident on those changes ;)
 
 var allInputs;
 var InStat_1;
