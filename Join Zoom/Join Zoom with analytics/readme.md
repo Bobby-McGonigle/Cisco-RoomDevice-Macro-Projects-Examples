@@ -7,7 +7,7 @@
 * This not only will help guide my next suite of integrations or UI enhancements, but it produces a neat little pie chart in excel and you can say to your boss "Hey it works, you can sign me on for another year right?!?!" :smirk:)
 
 ## What You'll Need
-* Cisco Room device on ce 9.8.X or greater (Works on Cloud registered endpoints too)
+* Cisco Room device on ce9.8.X or greater (Works on Cloud registered endpoints too)
 * Admin Access
 * Some Knowledge on the Macro Editor
 * Some Knowledge on Editing Scripts
@@ -15,7 +15,7 @@
   * Or another service that can collect data
 * Some Knowledge on Excel and Power Automate (Not much, but some :smiley:)
 
-## Gettings Started
+## Getting Started
 
 We will be collecting the following information in this example
 * Date and time (reported by the endpoint)
@@ -31,7 +31,7 @@ We will be collecting the following information in this example
 Creating our Excel Table
 * Create a new Excel sheet online
 * Name it something that makes Sense to you, and your data collection mission
-* Create a table with the following collums
+* Create a table with the following columns
   ![Example Table](https://github.com/Bobby-McGonigle/Macro-Samples/blob/master/Join%20Zoom/Join%20Zoom%20with%20analytics/images/08_Excel%20Table.png)
 * Save your document, and move over to MicroSoft Power Automate
 
@@ -52,17 +52,17 @@ Here is an example image of the Flow we're going to build from the Top Down
       * This URL is what your Room Device will post too.
       ![When an HTTP Request is received](https://github.com/Bobby-McGonigle/Macro-Samples/blob/master/Join%20Zoom/Join%20Zoom%20with%20analytics/images/03_HTTP%20Request%20Received.png)
   * Next in the flow is the Control Condition
-    * This control condition can be used for all sorts or processes, but we're going to uuse it to set up some base authentication
-    * Were goint to evaluate if our auth object is equal to the correct authentication in the flow.
+    * This control condition can be used for all sorts or processes, but we're going to use it to set up some base authentication
+    * Were going to evaluate if our auth object is equal to the correct authentication in the flow.
       * If it passes, them we'll execute an update to our table
       * If it failes, we'll send an Email to ourselves
       ![Control Condition](https://github.com/Bobby-McGonigle/Macro-Samples/blob/master/Join%20Zoom/Join%20Zoom%20with%20analytics/images/04_Check%20Credentials.png)
         * #### The control Passes
-          * We first send back a 200 repsonse to let the Room Device know everthing is A-Ok!
+          * We first send back a 200 response to let the Room Device know everything is A-Ok!
             ![Pass Authentication](https://github.com/Bobby-McGonigle/Macro-Samples/blob/master/Join%20Zoom/Join%20Zoom%20with%20analytics/images/05_HTTP%20Response.png)
           * Then we will insert a row into our Table with all the information we gathered from the payload
-            ![Add a Row tp a Table](https://github.com/Bobby-McGonigle/Macro-Samples/blob/master/Join%20Zoom/Join%20Zoom%20with%20analytics/images/06_Add%20Row%20to%20Table.png)
-        * #### The control Failes
+            ![Add a Row to a Table](https://github.com/Bobby-McGonigle/Macro-Samples/blob/master/Join%20Zoom/Join%20Zoom%20with%20analytics/images/06_Add%20Row%20to%20Table.png)
+        * #### The control Fails
            * We First send back a 401 response, to let the endpoint know we failed the Authentication Check
            * We then send a notification to ourselves to let us know the X endpoint had an issue
             ![Email Notification](https://github.com/Bobby-McGonigle/Macro-Samples/blob/master/Join%20Zoom/Join%20Zoom%20with%20analytics/images/07_Email%20Notification.png)
@@ -71,7 +71,7 @@ Here is an example image of the Flow we're going to build from the Top Down
 * Be sure to save your Flow, and before we can start using, we need to perform a test first
 
 ### Step 3
-Adding in, and Modyifing the JoinZoom with Analytics Script
+Adding in, and Modifying the JoinZoom with Analytics Script
 
 * First download the script [joinZoom_wAnalytics.js](https://github.com/Bobby-McGonigle/Macro-Samples/blob/master/Join%20Zoom/Join%20Zoom%20with%20analytics/joinZoom_wAnalytics.js)
   * Go to Line 52 and edit
@@ -120,8 +120,8 @@ But I hope this example serves as a good starting point for collecting Data for 
 ## Use Case examples
 
 * Collecting information for usage as we had done above
-* User Satifaction Surveys
-* Resevoir to store information to GET, rather than POST
+* User Satisfaction Surveys
+* Reservoir to store information to GET, rather than POST
 * Probably more too, Power Automate has A LOT of integrations, I suggest you explore.
 
 ## Deployment
@@ -139,4 +139,3 @@ There are many flavors of deployment, but I recommend using Ce-Deploy by Christo
 * Cisco Room Device Team
 * My End Users
 * Antoine Eduoard - *Mentor*
-
