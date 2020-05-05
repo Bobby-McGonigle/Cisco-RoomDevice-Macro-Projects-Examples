@@ -46,9 +46,33 @@ As an admin, the system will print the following logs
 
 ## Getting Started
 
-TBC
+* Download [joinZoom_wSecurityEnabled.js](https://github.com/Bobby-McGonigle/Cisco-RoomDevice-Macro-Projects-Examples/blob/master/Join%20Zoom/Join%20Zoom%20with%20Security%20Enhancements/joinZoom_wSecurityEnabled.js)
+* Open in an editor and make the following change(s)
+  * On line 12 change ```var zoomDomain = "Domain"``` to match your Zoom Domain
+* Save and load this into the Room device's macro editor
+* Run the script
 
+Once this is loaded in and enabled, it should generate the UI for you and start to work
 
+### Things to consider
+* You could shorten how many steps to enter the call by combining steps
+ * I had done so the way I had, in the hope more Zoom API opens up, and allows me to authenticate the host for a specific meeting
+  * If I can do that, I can add in a "Zoom Tools" button for the host Room Device, which are a bunch of automated DTMF patterns
+* You could merge this with the [Join Zoom with Analytics Example](https://github.com/Bobby-McGonigle/Cisco-RoomDevice-Macro-Projects-Examples/tree/master/Join%20Zoom/Join%20Zoom%20with%20analytics) to collect information on whether or not people are using this button
 
+## Deployment
 
+There are many flavors of deployment, but I recommend using Ce-Deploy by Christopher Norman, as it's a great tool for loading this into a whole environment quickly and easily.
 
+* [CE-Deploy](https://github.com/voipnorm/CE-Deploy)
+
+## Author(s)
+
+* **Robert McGonigle Jr**
+
+## Acknowledgments
+
+* Cisco Room Device Team
+* Special Thanks to Dmitriy Bakhter for discovering a dial string oversight :smiley:
+* My End Users
+* Antoine Eduoard - *Mentor*
