@@ -104,6 +104,7 @@ Testing
       var zoom_Button_Text = 'Join Zoom';
       ```
     * Keeping the UI apart of the macro makes deployment a tad bit quicker, especially when we tackle the Sx10 Next :smiley:
+    
 ## Deployment
 
 There are many flavors of deployment, but I recommend using Ce-Deploy by Christopher Norman, as it's a great tool for loading this into a whole environment quickly and easily.
