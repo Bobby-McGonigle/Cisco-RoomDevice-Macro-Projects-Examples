@@ -6,7 +6,7 @@
 * I learned that 
   * My variables reset if the Macro Environment crashed
   * My variables reset if the system restarts
-* Joking aside, I had some real challenges trying to keep a consistant experience in some use cases and needed a more complex ballet of variables in other use cases
+* I had some real challenges trying to keep a consistant experience in some use cases and needed a more complex ballet of variables in other use cases
 * One thing I did have at my disposal were _Unused Assets_
   * Peices of the configuration my environment had little use for.
     * Not to say they aren't important, it's just our org doesn't need them.
