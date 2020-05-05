@@ -6,18 +6,18 @@
 * I learned that 
   * My variables reset if the Macro Environment crashed
   * My variables reset if the system restarts
-* I had some real challenges trying to keep a consistant experience in some use cases and needed a more complex ballet of variables in other use cases
+* I had some real challenges trying to keep a consistent experience in some use cases and needed a more complex ballet of variables in other use cases
 * One thing I did have at my disposal were _Unused Assets_
-  * Peices of the configuration my environment had little use for.
+  * Pieces of the configuration my environment had little use for.
     * Not to say they aren't important, it's just our org doesn't need them.
 
 ## Introducing "xConfiguration FacilityService Service 5 Name"
-* My unused asset of choice, but can be substituted with another comparable text feild, keep an open mind if you use this asset already, there may be another way.
+* My unused asset of choice, but can be substituted with another comparable text field, keep an open mind if you use this asset already, there may be another way.
 
 ## Properties
-**FacilityService Service 5 Name** has 2 unique properties that make this an exellent spot for me.
+**FacilityService Service 5 Name** has 2 unique properties that make this an excellent spot for me.
 * It can store up to _1024_ characters
-  * That's alot of room
+  * That's a lot of room
 * The service slot will **NOT** show on the touch 10, so long as I don't fill in a ```FacilityService Service 5 Number```
   * This is important, because i don't want that help desk Icon showing, and I don't want this seen by users if at all possible.
 
@@ -61,12 +61,31 @@ This is the _KEY_ function you will call throughout the rest of your use case an
     * memoryCapacity() is a tool for You. As I noted above, FacilityService Service 5 Name has a character limit of 1024. This function will print out a percentage of how full your memory storage is while developing.
     * Hopefully this helps you stay on target :)
     
-## Great Use Cases to consider
+## Things to Consider
+* This script starts with 20 blocks to use, but this can be modified to fit more or less
+ * For example: The character limit is 1024, so you could have 512 single character blocks of memery (0s and 1s) or have 1 block of 1024 characters. Whatever you need.
+* be mindful, don't duplicate across multiple macros, it could get confusing. Try to keep it all in one if you can
+
+## Use Cases
 * Creating a password to lock and unlock certain features of the Room Device
   * Great for public spaces
   * Special Integrations
-* Saving a rooms state for Matrixing, Audio Routing, etc
+* Saving a rooms state for Video Matrices, Audio Routing, etc
 * Saving GUI feedback information
   * Update the value of all Widgets after a restart
 
+## Deployment
 
+There are many flavors of deployment, but I recommend using Ce-Deploy by Christopher Norman, as it's a great tool for loading this into a whole environment quickly and easily.
+
+* [CE-Deploy](https://github.com/voipnorm/CE-Deploy)
+
+## Author(s)
+
+* **Robert McGonigle Jr**
+
+## Acknowledgments
+
+* Cisco Room Device Team
+* My End Users
+* Antoine Eduoard - *Mentor*
