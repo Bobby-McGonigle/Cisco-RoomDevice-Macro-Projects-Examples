@@ -11,6 +11,11 @@ Now that 2 platforms were going to be Live ( and the Join Webex native UI was no
 
 Noticing patterns among SIP URIs and then approaching a space as a user in mind, I thought to myself, I'm here to launch a meeting, let's make a Launch Meeting button
 
+## Goal
+* Create a userinterface that people can approach
+* Make sure the experience is consistent across All video endpoints in our environment
+* Make sure the context provided, matches other sources users receive this information from
+
 ## How the script works
 * A user approaches the touch 10
 * Selects Launch Meeting
