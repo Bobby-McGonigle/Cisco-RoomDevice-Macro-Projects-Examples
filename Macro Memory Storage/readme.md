@@ -37,7 +37,7 @@ This is the _KEY_ function you will call throughout the rest of your use case an
   * ```newInfo``` is the string you'll enter in to replace the previous information stored in this block of memory
   * ```targetBlock``` is the memory block you want to change in the ```mem``` array.
   * For example, if i want to change block_0 in the ```mem``` array, I'd write the following
-  ```
+  ```javascript
   var mem = {
     'block_0': {
         "id": "slot_1", 
