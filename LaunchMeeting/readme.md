@@ -1,5 +1,7 @@
 # Launch Meeting
 
+A simple, user approachable way to enter a meeting on multiple platforms.
+
 ## Inspiration
 Our org was transitioning away from Webex as a platform and towards Zoom
 
