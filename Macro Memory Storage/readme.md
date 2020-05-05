@@ -63,7 +63,7 @@ This is the _KEY_ function you will call throughout the rest of your use case an
     
 ## Things to Consider
 * This script starts with 20 blocks to use, but this can be modified to fit more or less
- * For example: The character limit is 1024, so you could have 512 single character blocks of memery (0s and 1s) or have 1 block of 1024 characters. Whatever you need.
+ * For example: The character limit is 1024, so you could have 512 single character blocks of memory (0s and 1s) or have 1 block of 1024 characters. Whatever you need.
 * be mindful, don't duplicate across multiple macros, it could get confusing. Try to keep it all in one if you can
 
 ## Use Cases
