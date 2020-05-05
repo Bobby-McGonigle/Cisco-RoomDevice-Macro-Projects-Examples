@@ -12,7 +12,7 @@
 * Build the SIP string for the user, rather than have them build it
 
 ## What You'll Need
-* Cisco Room device on ce 9.8.X or greater (Works on Cloud registered endpoints too)
+* Cisco Room device on ce9.8.X or greater (Works on Cloud registered endpoints too)
 * Admin Access
 * Some Knowledge on the Macro Editor
 * Some Knowledge on Editing Scripts
@@ -21,7 +21,7 @@
 
 ![T10 Home](https://github.com/Bobby-McGonigle/Macro-Samples/blob/master/Join%20Zoom/Join%20Zoom%20with%20Security%20Enhancements/images/00_Home.png)
 
-* So the initial prompt remains the same, albeit 1 slight change from the oringinal joinZoom.js
+* So the initial prompt remains the same, albeit 1 slight change from the original joinZoom.js
   * Instead of selecting "join" after entering the meeting id, you select "Next"
     * ![JoinZoomMID](https://github.com/Bobby-McGonigle/Macro-Samples/blob/master/Join%20Zoom/Join%20Zoom%20with%20Security%20Enhancements/images/01_JZS%20Home.png)
   * After entering in the meeting ID, the user will be prompted with a Role Selection
