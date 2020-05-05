@@ -57,7 +57,7 @@ xapi.event.on('UserInterface Message TextInput Response', (event) => {
 	          }
 	        else {
 	          xapi.command('Dial', {Number: event.Text + WebexSip});
-	          console.log('Dialed Number: '+event.Text+ '  ---> "@'+WebexDomain+'.webex.com" appended to string.');
+	          console.log('Dialed Number: '+event.Text+ '  ---> "@'+WebexDomain.toLowerCase()+'.webex.com" appended to string.');
 	        }
 	       break;
 	     case 'zoom_meetingX':
