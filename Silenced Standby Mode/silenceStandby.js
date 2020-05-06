@@ -4,7 +4,7 @@ const xapi = require('xapi');
 var systemDefaults = {
     "maxUltrasound": 70,
     "proximityMode": "off",
-    "wakeOnMotion": "on",
+    "wakeOnMotion": "on"
 };
 
 //The features we update to prevent waking the system via ultrasound, then place into standby
