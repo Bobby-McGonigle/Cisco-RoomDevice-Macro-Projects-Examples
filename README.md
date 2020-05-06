@@ -21,6 +21,7 @@ Cisco Video Endpoint Macro Repository by Robert McGonigle Jr
 |[Macro Memory Storage](https://github.com/Bobby-McGonigle/Macro-Samples/tree/master/Macro%20Memory%20Storage)| A good way to store some information on the endpoint for safe keeping, and a good way to make use of every configuration item, even if you don't need it :)|
 |[Join Zoom](https://github.com/Bobby-McGonigle/Macro-Samples/tree/master/Join%20Zoom)| Several variations of an entry way for Dialing into SIP enabled Zoom sessions (Has since replaced my beloved LaunchMeeting)|
 |[KeyBeam](https://github.com/Bobby-McGonigle/RoomDevice-Macro-Samples/tree/master/KeyBeam)| The KeyBeam is an DIY Room Partition sensor that's low cost, makes use of the Macro Environment, plugs directly into a Room or Board Series Endpoint, and no Room Controller Needed! (for this sensor at least). Why call it KeyBeam, because it's a keyboard with a Beam Sensor! :smiley:|
+| [Silenced Standby Mode](https://github.com/Bobby-McGonigle/Cisco-RoomDevice-Macro-Projects-Examples/tree/master/Silenced%20Standby%20Mode)| For those who just don't like Room Devices waking up too much when not in use, a simple solution to keep an endpoint asleep |
 
 ## Check out other **AWESOME!** Projects in the Github Community!
 
