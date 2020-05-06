@@ -77,7 +77,7 @@ There are many flavors of deployment, but I recommend using Ce-Deploy by Christo
 
 * [CE-Deploy](https://github.com/voipnorm/CE-Deploy)
 
-## Things to consider
+## Things to Consider
 * This script was built on the need for my own deployment purposes
 * Some edits may be required, as this may tamper with some configuration you already have set on your devices
 * For example, this script assumes you do not use Digital Signage normally.
