@@ -22,3 +22,5 @@ function bootStatus() {
         console.log('Check UpTime = ' + UpTime);
     });
 }
+
+bootStatus();
