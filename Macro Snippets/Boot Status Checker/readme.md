@@ -34,7 +34,7 @@ Based on how much uptime there is, we will choose to run certain xApi or functio
 ## Getting Started
 
 * Download [bootStatus.js](https://github.com/Bobby-McGonigle/Cisco-RoomDevice-Macro-Projects-Examples/blob/master/Macro%20Snippets/Boot%20Status%20Checker/bootStatus.js)
-* Make changes to the following lines
+* Open in an editor Make changes to the following lines
   * Lines 8 and 21
     * The time for the uptime is checked here, adjust as needed
   * Between lines 9 through 11
