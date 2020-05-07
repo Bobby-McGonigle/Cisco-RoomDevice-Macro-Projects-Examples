@@ -22,6 +22,7 @@ Cisco Video Endpoint Macro Repository by Robert McGonigle Jr
 |[Join Zoom](https://github.com/Bobby-McGonigle/Macro-Samples/tree/master/Join%20Zoom)| Several variations of an entry way for Dialing into SIP enabled Zoom sessions (Has since replaced my beloved LaunchMeeting)|
 |[KeyBeam](https://github.com/Bobby-McGonigle/RoomDevice-Macro-Samples/tree/master/KeyBeam)| The KeyBeam is an DIY Room Partition sensor that's low cost, makes use of the Macro Environment, plugs directly into a Room or Board Series Endpoint, and no Room Controller Needed! (for this sensor at least). Why call it KeyBeam, because it's a keyboard with a Beam Sensor! :smiley:|
 | [Silenced Standby Mode](https://github.com/Bobby-McGonigle/Cisco-RoomDevice-Macro-Projects-Examples/tree/master/Silenced%20Standby%20Mode)| For those who just don't like Room Devices waking up too much when not in use, a simple solution to keep an endpoint asleep |
+| [Ad-Hoc Conference](https://github.com/Bobby-McGonigle/Cisco-RoomDevice-Macro-Projects-Examples/tree/master/Ad-Hoc%20Conference) | A way for you to assign a Webex, Zoom, Bluejeans, Etc. account to a room device, without disclosing the information to users. Let's any user walk into a space and start conferencing, great for public spaces or students. |
 
 ## Check out other **AWESOME!** Projects in the Github Community!
 
@@ -30,7 +31,6 @@ Cisco Video Endpoint Macro Repository by Robert McGonigle Jr
 |[roomdevices-macros-samples](https://github.com/CiscoDevNet/roomdevices-macros-samples)| A bunch of great examples to learn from, I can't thank this link enough for its content |
 |[awesome-api](https://github.com/CiscoDevNet/awesome-xapi)| Nearly a map of all thing Room devices, from macro sample, to server side management of endpoints |
 |[CE-Deploy](https://github.com/voipnorm/CE-Deploy)| A fantastic deployment tool for the Macro editor, branding, software deployment, and the list is continuing to grow |
-| [Ad-Hoc Conference](https://github.com/Bobby-McGonigle/Cisco-RoomDevice-Macro-Projects-Examples/tree/master/Ad-Hoc%20Conference) | A way for you to assign a Webex, Zoom, Bluejeans, Etc. account to a room device, without disclosing the information to users. Let's any user walk into a space and start conferencing, great for public spaces or students. |
 
 ## Disclaimer
 
