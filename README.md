@@ -31,4 +31,10 @@ Cisco Video Endpoint Macro Repository by Robert McGonigle Jr
 |[awesome-api](https://github.com/CiscoDevNet/awesome-xapi)| Nearly a map of all thing Room devices, from macro sample, to server side management of endpoints |
 |[CE-Deploy](https://github.com/voipnorm/CE-Deploy)| A fantastic deployment tool for the Macro editor, branding, software deployment, and the list is continuing to grow |
 
+## Disclaimer
+
+* These samples/projects are meant to help guide newcomers into the Macro realm, as well as inpire different possibilities with these endpoints. 
+  * AKA, may include some bugs here an there.
+* These scripts have been tested and worked well for me, so feel free to implement them, but the xApi can change, be mindful when deploying, always test first :smiley:
+
 # Happy Coding XD
