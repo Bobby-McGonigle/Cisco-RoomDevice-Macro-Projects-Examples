@@ -50,6 +50,13 @@ When the Macro editor was finally release, I thought to myself "This can be auto
 
 No login info is shown to the user, and the host pin remains to be hidden
   * The in room documents can be shortened as well
+
+## What You'll Need
+* Cisco Room Device on ce9.4.X or greater
+* Admin access to the video endpoint
+* An account from your Call Service (Webex, Zoom, Etc) available for you to assign to this script
+* Some knowledge on the Macro Editor
+* Some knowledge on editing scripts
   
 ## Getting Started
 
