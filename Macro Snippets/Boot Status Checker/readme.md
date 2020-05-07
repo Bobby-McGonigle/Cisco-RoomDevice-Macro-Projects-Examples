@@ -42,6 +42,35 @@ Based on how much uptime there is, we will choose to run certain xApi or functio
   * Between Lines 16 through 18
     * Add in xApi as need for when the **Room Device** restarts
 
+```javascript
+const xapi = require('xapi');
+
+let secondsAlive;
+
+function bootStatus() {
+    xapi.status.get('SystemUnit Uptime').then((UpTime) => {
+        secondsAlive = UpTime;
+        if (secondsAlive >= 65) {
+            /*
+            Run xApi you need HERE after the macro environment crashes
+            */
+            console.log("Macro Script interrupted. Either script update or crash.");
+            return;
+        }
+        do {
+            /*
+            Run xApi you need HERE after your system restarts
+            */
+            return;
+        }
+        while (secondsAlive <= 64);
+        console.log('Check UpTime = ' + UpTime);
+    });
+}
+
+bootStatus();
+```
+
 ## Things to consider
 * To be honest, I can't think of anything but the **Warning** written above
 * Open to suggestion though :smiley:
