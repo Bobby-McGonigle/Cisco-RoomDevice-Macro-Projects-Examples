@@ -9,7 +9,7 @@ Cisco Video Endpoint Macro Repository by Robert McGonigle Jr
 * This is partially due to a lack of resources and a lack of knowledge, but you can make these systems dance like never before with the Macro Editor and I want to push them to their limits (Oh my poor Dx80, I hope you continue to recover after each crash XD)
 
 * Sorry for the lack of comments, sorry for the lack of finesse in my scripting. Still relatively new at this, but learning and succeeding everyday.
-* I enjoy any and all feedback, as you all may see a simpler way to implement my code than I can, I just hope I can inspire those to dive deeper in Cisco Room systems as a great all around Telepresence and AV system and maybe save you a couple of $$ along the way :)
+* I enjoy any and all feedback, as you all may see a simpler way to implement my code than I can, I just hope I can inspire those to dive deeper in Cisco Room systems as a great all around Telepresence and AV system and maybe save you a couple of $$ along the way :smiley:
 
 ## What I have so far
 
