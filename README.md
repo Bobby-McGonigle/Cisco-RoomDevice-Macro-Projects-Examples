@@ -30,6 +30,7 @@ Cisco Video Endpoint Macro Repository by Robert McGonigle Jr
 |[roomdevices-macros-samples](https://github.com/CiscoDevNet/roomdevices-macros-samples)| A bunch of great examples to learn from, I can't thank this link enough for its content |
 |[awesome-api](https://github.com/CiscoDevNet/awesome-xapi)| Nearly a map of all thing Room devices, from macro sample, to server side management of endpoints |
 |[CE-Deploy](https://github.com/voipnorm/CE-Deploy)| A fantastic deployment tool for the Macro editor, branding, software deployment, and the list is continuing to grow |
+| [Ad-Hoc Conference](https://github.com/Bobby-McGonigle/Cisco-RoomDevice-Macro-Projects-Examples/tree/master/Ad-Hoc%20Conference) | A way for you to assign a Webex, Zoom, Bluejeans, Etc. account to a room device, without discosing the information to users. Let's any user walk into a space and start conferencing, great for public spaces or students |
 
 ## Disclaimer
 
