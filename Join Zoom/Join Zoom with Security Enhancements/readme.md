@@ -76,3 +76,4 @@ There are many flavors of deployment, but I recommend using Ce-Deploy by Christo
 * Special Thanks to Dmitriy Bakhter for discovering a dial string oversight :smiley:
 * My End Users
 * Antoine Eduoard - *Mentor*
+* Dawn Passerini - *Mentor*
