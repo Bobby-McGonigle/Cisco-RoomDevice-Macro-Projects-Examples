@@ -24,6 +24,7 @@ Cisco Video Endpoint Macro Repository by Robert McGonigle Jr
 | [Silenced Standby Mode](https://github.com/Bobby-McGonigle/Cisco-RoomDevice-Macro-Projects-Examples/tree/master/Silenced%20Standby%20Mode)| For those who just don't like Room Devices waking up too much when not in use, a simple solution to keep an endpoint asleep |
 | [Ad-Hoc Conference](https://github.com/Bobby-McGonigle/Cisco-RoomDevice-Macro-Projects-Examples/tree/master/Ad-Hoc%20Conference) | A way for you to assign a Webex, Zoom, Bluejeans, Etc. account to a room device, without disclosing the information to users. Let's any user walk into a space and start conferencing, great for public spaces or students. |
 |[Macro Snippets](https://github.com/Bobby-McGonigle/Cisco-RoomDevice-Macro-Projects-Examples/tree/master/Macro%20Snippets)| Small pieces of code, that can be included in a variety of scripts, such as a Network Health Checker and a BootStatus checker. Not a full tool, just pieces to add to and strengthen your own Macros.|
+|[Lock Features](https://github.com/Bobby-McGonigle/Cisco-RoomDevice-Macro-Projects-Examples/tree/master/Lock%20Features)|  Build a way to lock and unlock features on a Cisco Room Devices. Make field service tools, team tools, and prevent unauthorized groups from using them|
 
 ## Check out other **AWESOME!** Projects in the Github Community!
 
