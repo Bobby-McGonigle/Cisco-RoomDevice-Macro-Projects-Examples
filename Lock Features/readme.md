@@ -150,7 +150,8 @@ I will only be showing you where you can change the command for locking and unlo
 The remainder of the script are the message prompts for this system.
 
 ## Things to Consider
-* Definatley a full review, one of my earlier scrips, where I see a lot of potential to improve :smiley:
+* This tool is better served by a 3rd party autentication system, but for those who have limited tool sets, this is a great workaround.
+* Definatley needs a full review, one of my earlier scripts, where I see a lot of potential to improve :smiley:
 * Merging [Macro Memory Storage](https://github.com/Bobby-McGonigle/Cisco-RoomDevice-Macro-Projects-Examples/blob/master/Lock%20Features/images/03_Home(Unlocked).png)
   * Macro Memory Storage was born here, and running in at a reduced capacity in this script
 * Finding a way to encrypt the value stored in your unused Asset, used to store the passphrase
