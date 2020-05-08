@@ -197,7 +197,7 @@ xapi.event.on('UserInterface Extensions Panel Clicked', (event) => {
                 Text: 'Please enter your System Passphrase',
                 FeedbackId: 'disengageSystemLock',
                 Placeholder: 'Passphrase',
-                InputType: 'SingleLine',
+                InputType: 'Password',
                 KeyboardState: 'Open',
                 SubmitText: 'Unlock',
                 Duration: 30
@@ -213,7 +213,7 @@ xapi.event.on('UserInterface Extensions Panel Clicked', (event) => {
                 Text: 'Please enter your original Passphrase',
                 FeedbackId: 'password_confirmation',
                 Placeholder: 'Original Passphrase',
-                InputType: 'SingleLine',
+                InputType: 'Password',
                 KeyboardState: 'Open',
                 SubmitText: 'Verify',
                 Duration: 30
@@ -267,7 +267,7 @@ xapi.event.on('UserInterface Message TextInput Response', (event) => {
                     Text: 'Please enter your new Passphrase. Case Sensitive; 1024 Character Limit',
                     FeedbackId: 'new_password',
                     Placeholder: 'New Passphrase',
-                    InputType: 'SingleLine',
+                    InputType: 'Password',
                     KeyboardState: 'Open',
                     SubmitText: 'Enter',
                     Duration: 30
@@ -290,7 +290,7 @@ xapi.event.on('UserInterface Message TextInput Response', (event) => {
                     Text: 'Please re-enter your new Passphrase',
                     FeedbackId: 'new_password_confirm',
                     Placeholder: 'Re-enter New Passphrase.',
-                    InputType: 'SingleLine',
+                    InputType: 'Password',
                     KeyboardState: 'Open',
                     SubmitText: 'Enter',
                     Duration: 30
