@@ -90,3 +90,4 @@ There are many flavors of deployment, but I recommend using Ce-Deploy by Christo
 * Cisco Room Device Team
 * My End Users
 * Antoine Eduoard - *Mentor*
+* Dawn Passerini - *Mentor*
