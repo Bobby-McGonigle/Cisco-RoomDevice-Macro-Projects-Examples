@@ -121,3 +121,4 @@ There are many flavors of deployment, but I recommend using Ce-Deploy by Christo
 * Special Thanks to Catherine Conway on communication Choices
 * My End Users
 * Antoine Eduoard - *Mentor*
+* Dawn Passerini - *Mentor*
