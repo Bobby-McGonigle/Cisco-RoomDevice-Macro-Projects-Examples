@@ -250,3 +250,4 @@ Before we move onto the deployment
 * Special Thanks to the Node.Js, pm2, and the JSXAPI
 * My End Users
 * Antoine Eduoard - *Mentor*
+* Dawn Passerini - *Mentor*
