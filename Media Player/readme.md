@@ -94,3 +94,4 @@ There are many flavors of deployment, but I recommend using Ce-Deploy by Christo
 * My End Users
 * Antoine Eduoard - *Mentor*
 * Broderic Flannery - *Assisted in testing*
+* Dawn Passerini - *Mentor*
