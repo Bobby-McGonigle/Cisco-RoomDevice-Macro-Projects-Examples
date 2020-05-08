@@ -33,7 +33,6 @@ function bootStatus() {
 bootStatus();
 
 function lockUI() {
-    xapi.config.set('UserInterface CustomMessage', 'Content Sharing Only. System locked.');
     xapi.command('UserInterface Extensions Panel Remove', {
         PanelID: 'lock_VC_system'
     }); //  can i run these in an array format???
@@ -57,7 +56,6 @@ function lockUI() {
 }
 
 function unlockUI() {
-    xapi.config.set('UserInterface CustomMessage', 'e911 Not Available');
     xapi.command('UserInterface Extensions Panel Remove', {
         PanelID: 'unlock_VC_system'
     });
@@ -119,6 +117,7 @@ function infiniteDoNotDisturb() {
 function lockDown(consoleLog) {
     lockUI();
     dndState = true;
+    xapi.config.set('UserInterface CustomMessage', 'Content Sharing Only. System locked.');
     xapi.config.set('UserInterface Features Call Start', 'Hidden');
     xapi.config.set('UserInterface SettingsMenu Visibility', "Hidden");
     infiniteDoNotDisturb();
@@ -131,6 +130,7 @@ function unlock() {
     failCount = 0;
     xapi.command('UserInterface Message Textline Clear');
     xapi.command('Conference DoNotDisturb Deactivate');
+    xapi.config.set('UserInterface CustomMessage', 'e911 Not Available');
     xapi.config.set('UserInterface Features HideAll', false);
     xapi.config.set('UserInterface Features Call Start', 'Auto');
     xapi.config.set('UserInterface SettingsMenu Visibility', "Auto");
