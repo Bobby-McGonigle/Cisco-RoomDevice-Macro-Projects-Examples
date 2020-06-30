@@ -68,7 +68,7 @@ So if you want to modify the script to add more variety, go for it, just follow 
 The script should start working, and just in time for your next video call :smiley:
 
 ## Things to consider
-* "All work no play makes jack a dull boy" - The Shining
+* "All work and no play makes Jack a dull boy" - The Shining
   * Collaboration does not come without companionship, though this may be an obscure use case, having after work D&D Sessions can be a great team building exercise or just a lot of fun.
   * D&D is not the only game either, your monopoly board that's missing a die could make use of this too :smiley:
   * If you prefer Yahtzee, well then you got some work to do, but this script can be changed to roll multiple dice
