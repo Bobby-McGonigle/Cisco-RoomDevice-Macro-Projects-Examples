@@ -56,14 +56,16 @@ So if you want to modify the script to add more variety, go for it, just follow 
 **N** = Number
 
 ## Installing the script
-* Download [D&D_DiceRoller.js](https://raw.githubusercontent.com/Bobby-McGonigle/Cisco-RoomDevice-Macro-Projects-Examples/master/Games/Dice%20Roller/D%26D_DiceRoller.js)
+* Click on <a href="hhttps://github.com/Bobby-McGonigle/Cisco-RoomDevice-Macro-Projects-Examples/blob/master/Games/Dice%20Roller/D%26D_DiceRoller.js" target="_blank">D&D_DiceRoller.js</a>
+  * Copy these contents and save them in a text editor as ```D&D_DiceRoller.js```
   * Log into your video endpoint as an admin
   * Go to the macro editor
-  * Load in the script, save and enable
-* Download the [UserInterface](https://github.com/Bobby-McGonigle/Cisco-RoomDevice-Macro-Projects-Examples/blob/master/Games/Dice%20Roller/DiceRollerUI.xml)
+  * Load in this script, save and enable
+* Click on [UserInterface](https://github.com/Bobby-McGonigle/Cisco-RoomDevice-Macro-Projects-Examples/blob/master/Games/Dice%20Roller/DiceRollerUI.xml)
+  * Copy these contents and save them in a text editor as ```D&D_DiceRollerUI.xml```
   * Go the UI Extensions Editor
   * Drag and drop this file into this screen
-  * Push the interface to your endpoint
+  * Push the interface out to your endpoint
 
 The script should start working, and just in time for your next video call :smiley:
 
