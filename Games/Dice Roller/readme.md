@@ -56,7 +56,7 @@ So if you want to modify the script to add more variety, go for it, just follow 
 **N** = Number
 
 ## Installing the script
-* Download [D&D_DiceRoller.js](https://github.com/Bobby-McGonigle/Cisco-RoomDevice-Macro-Projects-Examples/blob/master/Games/Dice%20Roller/D%26D_DiceRoller.js)
+* Download [D&D_DiceRoller.js](https://raw.githubusercontent.com/Bobby-McGonigle/Cisco-RoomDevice-Macro-Projects-Examples/master/Games/Dice%20Roller/D%26D_DiceRoller.js)
   * Log into your video endpoint as an admin
   * Go to the macro editor
   * Load in the script, save and enable
