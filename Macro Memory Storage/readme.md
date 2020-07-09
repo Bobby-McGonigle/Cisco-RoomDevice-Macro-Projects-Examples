@@ -16,6 +16,8 @@
     * Updating block has a new format
       * ```updateMemBlock('newInfo', 'block_0');``` has changed to ```updateMemBlock('newInfo', 0);```
 
+**NOTE**: Memory Sotrage version one is still available and works. It will remain up so those new to the macro editor can observe how this has changed over time.
+
 ## Inspiration
 
 * As I dove deeper into Macros, I learned that I can create some really fantastic tools for my users, but the more creative I got, the more complex the challenge.
