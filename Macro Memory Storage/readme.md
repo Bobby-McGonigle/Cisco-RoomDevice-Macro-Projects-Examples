@@ -1,5 +1,21 @@
 # Simply Store Some Values with [MemoryStorage.js](https://github.com/Bobby-McGonigle/Macro-Samples/blob/master/Macro%20Memory%20Storage/MemoryStorage.js)
 
+## Update - Memory Storage Version 2
+* When going through this doc, I reccommend using [MemoryStorage_V2.js](https://github.com/Bobby-McGonigle/Cisco-RoomDevice-Macro-Projects-Examples/blob/master/Macro%20Memory%20Storage/MemoryStorage_V2.js).
+* It has been simplified a bit over version one, but behaves in the same manner.
+* Improvements: 
+  * Simplified **getMemInformation()** function
+    * No longer need to edit this function to increase/decrease how many memory blocks you need
+  * Simplified **memChain()** function.
+    * * No longer need to edit this function to increase/decrease how many memory blocks you need
+  * The only item you need to edit to increase/decrease storage now is ```var memBlock```
+* Changes:
+  * ```var mem``` was replaced with ```var memBlock```
+    * ```var memBlock``` is now an array and has received an "index" property
+    * The index property is just a tag for you to reference the index of your memory block when needed
+    * Updating block has a new format
+      * ```updateMemBlock('newInfo', 'block_0');``` has changed to ```updateMemBlock('newInfo', 0);```
+
 ## Inspiration
 
 * As I dove deeper into Macros, I learned that I can create some really fantastic tools for my users, but the more creative I got, the more complex the challenge.
