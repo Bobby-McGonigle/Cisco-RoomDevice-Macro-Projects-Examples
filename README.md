@@ -33,6 +33,7 @@ Cisco Video Endpoint Macro Repository by Robert McGonigle Jr
 |[roomdevices-macros-samples](https://github.com/CiscoDevNet/roomdevices-macros-samples)| A bunch of great examples to learn from, I can't thank this link enough for its content |
 |[awesome-api](https://github.com/CiscoDevNet/awesome-xapi)| Nearly a map of all thing Room devices, from macro sample, to server side management of endpoints |
 |[CE-Deploy](https://github.com/voipnorm/CE-Deploy)| A fantastic deployment tool for the Macro editor, branding, software deployment, and the list is continuing to grow |
+|[Nosaturn's CiscoTelePresenceEndpoints](https://github.com/nosaturn/CiscoTelePresenceEndpoints)|Cisco TelePresence Endpoints Join button for Zoom or BlueJeans|
 
 ## Disclaimer
 
