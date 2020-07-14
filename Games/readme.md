@@ -17,8 +17,8 @@ So let's get our users to collaborate and grow together
 
 ## Dice Roller
 
-![DiceMenu](https://github.com/Bobby-McGonigle/Cisco-RoomDevice-Macro-Projects-Examples/blob/master/Games/Dice%20Roller/Images/02_StandardMenu.png)
+[![DiceMenu](https://github.com/Bobby-McGonigle/Cisco-RoomDevice-Macro-Projects-Examples/blob/master/Games/Dice%20Roller/Images/02_StandardMenu.png)](#)
 
 ## Tic Tac Toe
 
-![BoardFilling](https://github.com/Bobby-McGonigle/Cisco-RoomDevice-Macro-Projects-Examples/blob/master/Games/TicTacToe/images/05_BoardFilling.png)
+[![BoardFilling](https://github.com/Bobby-McGonigle/Cisco-RoomDevice-Macro-Projects-Examples/blob/master/Games/TicTacToe/images/05_BoardFilling.png)](#)
