@@ -25,6 +25,7 @@ Cisco Video Endpoint Macro Repository by Robert McGonigle Jr
 | [Ad-Hoc Conference](https://github.com/Bobby-McGonigle/Cisco-RoomDevice-Macro-Projects-Examples/tree/master/Ad-Hoc%20Conference) | A way for you to assign a Webex, Zoom, Bluejeans, Etc. account to a room device, without disclosing the information to users. Let's any user walk into a space and start conferencing, great for public spaces or students. |
 |[Macro Snippets](https://github.com/Bobby-McGonigle/Cisco-RoomDevice-Macro-Projects-Examples/tree/master/Macro%20Snippets)| Small pieces of code, that can be included in a variety of scripts, such as a Network Health Checker and a BootStatus checker. Not a full tool, just pieces to add to and strengthen your own Macros.|
 |[Lock Features](https://github.com/Bobby-McGonigle/Cisco-RoomDevice-Macro-Projects-Examples/tree/master/Lock%20Features)|  Build a way to lock and unlock features on a Cisco Room Devices. Make field service tools, team tools, and prevent unauthorized groups from using them|
+|[Games!](https://github.com/Bobby-McGonigle/Cisco-RoomDevice-Macro-Projects-Examples/tree/master/Games)| Why not add a bit of fun to the office. Collaboration comes in many forms. Grow bonds, put in a bit of healthy competition, get people working together in any way you can!|
 
 ## Check out other **AWESOME!** Projects in the Github Community!
 
