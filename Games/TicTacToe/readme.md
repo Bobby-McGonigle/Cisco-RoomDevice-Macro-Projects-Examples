@@ -20,7 +20,7 @@ I just hope this serves a a way to help others find new ways to solve complex ta
 * Some knowledge of the Macro Editor
 * A couple of players
 
-## How this works
+## How this Script works
 
 This is a local multiplayer game, there is no single player mode or online option to this version (At least for now :wink:)
 
