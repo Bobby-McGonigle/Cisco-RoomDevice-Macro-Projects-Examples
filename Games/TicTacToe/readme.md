@@ -8,9 +8,7 @@ Since creating the Dice Roller script, I thought "How could we not only engage u
 
 If your team can play together, they can build together.
 
-I also wanted to illustrate how the Cisco Room Series can live outside the realm of it's base design.
-
-I just hope this serves a a way to help others find new ways to solve complex tasks in their spaces, or think of new possibilities for their users.
+I also wanted to illustrate how the Cisco Room Series can be adapted in a way to create new experience, solve new and unique tasks, and open up the realm of possibilities available to us through the xApi and the Macro Editor.
 
 ## What you'll need
 
