@@ -44,6 +44,20 @@ Well if you're running all audio through the headset feature, letting them shut 
   * If a user were to change this to **Internal**, then the system will change this back to USBHeadset and give the user the prompt below
   ![User Prompt-USB Headset](https://github.com/Bobby-McGonigle/Cisco-RoomDevice-Macro-Projects-Examples/blob/master/RK%20Mini%20USB%20Headset%20Mod/images/blockInternal%20Mode.png)
 
+**NOTE**: There is a testing mode in this script too. This will allow you to easily toggle on and off this tool while testing.
+
+On line 22 change the **active** object to ```true``` then a new UI will load in for you to test this script. Be sure to change this to false on a production endpoint :smiley:
+
+```javascript
+var testMode = {
+  active: false, //<true/false>
+  state: 'On' //do not modify this value
+}
+```
+You will get a UI that will provide USB Info and the ability to toggle on/off the tool
+
+![Test Mode UI](https://github.com/Bobby-McGonigle/Cisco-RoomDevice-Macro-Projects-Examples/blob/master/RK%20Mini%20USB%20Headset%20Mod/images/testMode.png)
+
 ## Getting Started
 
 * Go to [UsbHeadsetModv1-0-0.js](), copy the contents of this script
