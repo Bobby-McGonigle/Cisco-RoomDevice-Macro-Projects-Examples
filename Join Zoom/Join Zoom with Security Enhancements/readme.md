@@ -1,5 +1,36 @@
 # Join Zoom ~~With More Prompts!~~ Securely!
 
+## October 2020 UPDATES!
+
+* Version 2.1.0 has been added.
+  * Changes: 
+    * **DOMAIN** variable now on line 55
+    * Numeric Character limits and String Length limits imposed on Meeting ID fields and Host Key fields
+      * To help prevents users from entering incorrect information
+      * Will sound an audio error and prompt the user to re-enter that sections information
+        * New error message will show in the text field, indicating there was an issue to the user's entry
+    * New Meeting confirmation Splash Page
+      * Rather than connecting to the meeting at the end of all entries, and additional page will show that will reflect
+        * Splash Page will display
+          * Meeting ID
+          * Role
+          * Passcode
+          * Hostkey (Only if Host Role had been selected)
+        * The Splash page also includes options to update the Meeting ID, Passcode or Hostkey(Host role only) without needing to re-enter all the information
+      ![New confirmation Page](https://github.com/Bobby-McGonigle/Cisco-RoomDevice-Macro-Projects-Examples/blob/master/Join%20Zoom/Join%20Zoom%20with%20Security%20Enhancements/images/06_Host_Confirm.png)
+    * Text updates to each page
+      * After reviewing the content on each page, my original JoinZoom with Security needed a lot of text optimization
+        * Each page has had their information re-arrange to help a user clearly understand what is being asked of them
+        * Key Phrases have been capitalized to emphasize the intent.
+          * **NOTE**: At this time, there is not way to format text on the endpoints, capitalization is the best method.
+    * Script Re-mapped
+      * Made changes to how Text Language was placed in the body of the script to make editing a bit easier.
+          
+    * Original Join Zoom with Security has been re-labeled as Version 1.0.0   
+          
+    * The remaining readme file has not been updated to reflect this new script yet
+      * Please use [joinZoom_Security_Ver_2-1-0.js](https://github.com/Bobby-McGonigle/Cisco-RoomDevice-Macro-Projects-Examples/blob/master/Join%20Zoom/Join%20Zoom%20with%20Security%20Enhancements/joinZoom_Security_Ver_2-1-0.js) to make use of the new changes
+
 ## Inspiration
 * My org implemented more security features on our domain
 * This kind of broke the nice experience I had with [joinZoom.js](https://github.com/Bobby-McGonigle/Macro-Samples/tree/master/Join%20Zoom/Join%20Zoom%20(Basic))
