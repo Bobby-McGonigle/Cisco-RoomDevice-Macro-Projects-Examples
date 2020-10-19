@@ -2,7 +2,7 @@
 
 ## Inspiration
 
-CANADA! 
+CANADA! :maple_leaf:
 
 Well at least a French speaking colleague of mine in Canada :smiley:.
 
