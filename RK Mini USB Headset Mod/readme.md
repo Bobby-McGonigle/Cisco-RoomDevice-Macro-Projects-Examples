@@ -60,9 +60,9 @@ You will get a UI that will provide USB Info and the ability to toggle on/off th
 
 ## Getting Started
 
-* Go to [UsbHeadsetModv1-0-0.js](), copy the contents of this script
+* Go to [UsbHeadsetModv1-0-0.js](https://github.com/Bobby-McGonigle/Cisco-RoomDevice-Macro-Projects-Examples/blob/master/RK%20Mini%20USB%20Headset%20Mod/UsbHeadsetModv1-0-0.js), copy the contents of this script
 * Paste this script in as a new Macro on a Room Kit Mini
-* Save the script, and toglle the script on
+* Save the script, and toggle the script on
 
 * Then plug in a USB Headset **or headset like device** :smirk:
 
