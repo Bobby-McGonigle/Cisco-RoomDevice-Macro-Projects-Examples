@@ -27,6 +27,7 @@ Cisco Video Endpoint Macro Repository by Robert McGonigle Jr
 |[Lock Features](https://github.com/Bobby-McGonigle/Cisco-RoomDevice-Macro-Projects-Examples/tree/master/Lock%20Features)|  Build a way to lock and unlock features on a Cisco Room Devices. Make field service tools, team tools, and prevent unauthorized groups from using them|
 |[Games!](https://github.com/Bobby-McGonigle/Cisco-RoomDevice-Macro-Projects-Examples/tree/master/Games)| Why not add a bit of fun to the office. Collaboration comes in many forms. Grow bonds, put in a bit of healthy competition, get people working together in any way you can!|
 |[RK Mini USB Headset Mod](https://github.com/Bobby-McGonigle/Cisco-RoomDevice-Macro-Projects-Examples/tree/master/RK%20Mini%20USB%20Headset%20Mod)|Sick of users switching to the internal Microphone when all you desinged your space to use was the USB microphone? Stop them in their tracks with this script :smirk:|
+|[Classroom Mode Language Pack](https://github.com/Bobby-McGonigle/Cisco-RoomDevice-Macro-Projects-Examples/tree/master/Classroom%20Mode%20Language%20Pack)|Looks like Classroom mode is just in English.... Let's see if we can add a few more languages.<br> **Note**: Posted on 10-19-2020, I hope we won't need a macro for too long to acheive this|
 
 ## Check out other **AWESOME!** Projects in the Github Community!
 
