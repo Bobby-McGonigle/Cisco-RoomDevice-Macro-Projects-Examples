@@ -78,7 +78,7 @@ For more detail on how to use these functions, please scroll to the of end of th
 
 ## Things to consider
 * We're always looking for way to improve this script, if you have an idea, send it along :smiley:
-* Some of these functions rely on crashing your script to get the script name. It currently does not effect anything, and works reliably on ce9.14 and higher. Current Date Dec 2020
+* Some of these functions **rely on crashing your script** to get the script name. It currently does not effect anything, and works reliably on ce9.14 and higher. Current Date Dec 2020
   * So far it works, but we wanted you to know. We're hoping to find a way to have a script, discover it's own name. At them moment, this is the only way :sweat_smile:
 
 ## Author(s)
