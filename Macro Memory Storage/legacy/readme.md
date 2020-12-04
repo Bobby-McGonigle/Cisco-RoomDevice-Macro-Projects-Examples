@@ -1,5 +1,9 @@
 # Simply Store Some Values with [MemoryStorage.js](https://github.com/Bobby-McGonigle/Macro-Samples/blob/master/Macro%20Memory%20Storage/MemoryStorage.js)
 
+## Update - Memory Storage Version 1 and 2 have been replaced with a whole new script
+* These are now labled as legacy, however, they may still be useful for those who need to edit memory from the standard config menu in Facility Service 5
+* Check out the All NEW Macro [Memory Functions](https://github.com/Bobby-McGonigle/Cisco-RoomDevice-Macro-Projects-Examples/blob/master/Macro%20Memory%20Storage/readme.md) :smiley:
+
 ## Update - Memory Storage Version 2
 * When going through this doc, I reccommend using [MemoryStorage_V2.js](https://github.com/Bobby-McGonigle/Cisco-RoomDevice-Macro-Projects-Examples/blob/master/Macro%20Memory%20Storage/MemoryStorage_V2.js).
 * It has been simplified a bit over version one, but behaves in the same manner.
