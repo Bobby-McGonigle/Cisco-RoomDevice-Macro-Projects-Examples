@@ -2,11 +2,11 @@
 
 ## Disclaimer
 
-This Script was oringinally written by a colleague of mine, and I had beta tested it. 
+This Script was originally written by a colleague of mine, and I had beta tested it. 
 
-Through our tests, we found ways to optimize this script to be the best it can be in this Macro environement.
+Through our tests, we found ways to optimize this script to be the best it can be in this Macro environment.
 
-Defininitley a Co-Authored Script, details below :smiley:
+Definitely a Co-Authored Script, details below :smiley:
 
 ## Inspiration
 
@@ -35,9 +35,9 @@ This new macro will work alongside the Memory_Functions Macro as your main stora
 
 You won't see this at first, so please **refresh your page** :smiley:
 
-In addition to generating the storage repo for your endpoint, it will also search your endpoint for any script that do no have the Memroy Functoins imported and will edit each macro to provide an import.
+In addition to generating the storage repo for your endpoint, it will also search your endpoint for any script that do no have the Memory Functions imported and will edit each macro to provide an import.
 
-This search relies on your endpoint having the following string availble
+This search relies on your endpoint having the following string available
 
 ```javascript
 import xapi from 'xapi';
@@ -50,9 +50,47 @@ Directions for a manual import will be shown later on in this document.
 
 Once all of that has processed (it's rather quick) you should be ready to make use of all of the functions available
 
-## Functions!!!
+## Function List
 
-For the purposes of these function descriptions we will be referencing the below **Memory_Storage** example
+* mem.write(key, value)
+* mem.write.global(key, value)
+* mem.read(key)
+* mem.read.global(key)
+* mem.remove(key)
+* mem.remove.global(key)
+* mem.print()
+* mem.print.global()
+
+For more detail on how to use these functions, please scroll to the of end of this readme. Details listed under **Function Details**
+
+## Getting Started
+* Go to [Memory_Functions.js](https://github.com/Bobby-McGonigle/Cisco-RoomDevice-Macro-Projects-Examples/blob/master/Macro%20Memory%20Storage/Memory_Functions.js)
+* Copy and Paste the contents of this script in a as a new macro on your Cisco Room Device
+  * Label this Macro **Memory_Functions**
+* Save the script, and toggle it on. This should begin to work immediately
+  * Be sure to refresh your browser when it's done :smiley:
+
+## Things to consider
+* We're always looking for way to improve this script, if you have an idea, send it along :smiley:
+* Some of these functions rely on crashing your script to get the script name. It currently does not effect anything, and works reliably on ce9.14 and higher. Current Date Dec 2020
+  * So far it works, but we wanted you to know. We're hoping to find a way to have a script, discover it's own name. At them moment, this is the only way :sweat_smile:
+
+## Author(s)
+* Zacharie Gignac - Original Author and Project Lead
+* Robert McGonigle - Co-Author/Editor and Tester
+
+## Acknowledgments
+
+* Cisco Room Device Team
+* Special Thanks to Zacharie Gignac for finding a new way to write memory to the endpoints, involving me in the project and allowing me to post this on Github
+* Our End Users
+* Antoine Eduoard - *Mentor*
+* Dawn Passerini - *Mentor*
+
+
+### Function Details
+
+For the purposes of these function descriptions/guide we will be referencing the below **Memory_Storage** example
 
 ```javascript
 var memory = {
@@ -68,7 +106,7 @@ var memory = {
 }
 ```
 
-### Exported Functions
+## Exported Functions
 All functions under ```var mem``` are exported. These are: 
 
 * mem.write(key, value)
@@ -84,7 +122,7 @@ All functions under ```var mem``` are exported. These are:
 
 **mem.write(_key_, _value_)** is a Promise and expects an object key and a value to assign that object. 
 
-This is also a function that effects the script your currently working in. That way you can work in each script independantly, without having to worry if you're mixing information with another macro. All non **.global()** functions only effect the script you're working in.
+This is also a function that effects the script your currently working in. That way you can work in each script independently, without having to worry if you're mixing information with another macro. All non **.global()** functions only effect the script you're working in.
 
 Let's create a new macro called "myTestMacro"
 
@@ -122,7 +160,7 @@ This is how we're able to avoid other scripts from accessing information they do
 #### What if I want to right more that just 1 piece of information?
 * You can, but you need to be mindful that this process needs to resolve a promise first before it rights, so syntax is Key for a successful write
 
-### Writing style A (prefered)
+### Writing style A (preferred)
 Build a nested object locally in your macro then write this object when it's finished being built
 
 For example
@@ -154,7 +192,7 @@ Printed in Console
 mem.write('myNestedObject', myNestedObject)
 ```
 
-Style A will allow you to quickly build your information and sotre it all at once
+Style A will allow you to quickly build your information and store it all at once
 
 ### Writing style B
 
@@ -187,10 +225,10 @@ mem.write('myNestedObject', myNestedObject).then(()=>{
   })
 })
 ```
-Though Style A is preferred, Style be may be a neccessary alternative to right, depending on your use case.
+Though Style A is preferred, Style be may be a necessary alternative to right, depending on your use case.
 
 ### Before we move on
-Most other functions we'll cover makes us of the same principles detailed in mem.write() for that, I won't be going as in depth in the remaing examples, to allow this document some breathing room :smiley:
+Most other functions we'll cover makes us of the same principles detailed in mem.write() for that, I won't be going as in depth in the remaining examples, to allow this document some breathing room :smiley:
 
 ### mem.write._global_('key', 'value)
 
@@ -214,7 +252,7 @@ var memory = {
 }
 ```
 
-Notice that the Macro names are considered global, so you can overwrite them id neccessary, so be mindfull how you coordinate your information and use **.global()**
+Notice that the Macro names are considered global, so you can overwrite them id necessary, so be mindful how you coordinate your information and use **.global()**
 
 All example in mem.write() apply to mem.write.global()
 
@@ -244,7 +282,144 @@ var memory = {
 }
 ```
 
-We see in storage, there is one key avaiable to use **myLocalVar**
+We see in storage, there is one key available to use **myLocalVar**
 
 Let's pull that key's value into our script for use, then update it's value using mem.write
 
+```javascript
+import xapi from 'xapi';
+
+import { mem } from './Memory_Functions';
+
+mem.read('myLocalVar').then((value) => {
+    console.log(value)
+    if (value !== "$3,000") {
+        mem.write('myLocalVar', '$3,000').then(() => {
+            mem.read('myLocalVar').then((otherValue) => {
+                console.log(otherValue)
+                console.log('I wish my bank account had a rule like this...')
+            })
+        })
+    } else { }
+    /*
+    Console will print:
+    13:28:25 myMacro > '$2,000'
+    13:28:26 myMacro > '$3,000'
+    13:28:26 myMacro > 'I wish my bank account had a rule like this...'
+    */
+});
+```
+
+As mentioned under mem.write(), chaining your promises is important to the success of these functions :smiley:
+
+### mem.read(key)._global_
+
+**mem.read.global(_key_)** is a Promise and expects the object key you're looking for in Memory_Storage
+
+Just like mem.write.global(), this will read a key at the top level of your Memory_Storage script
+
+refer to the example in mem.read for use
+
+### mem.remove(key)
+
+**mem.remove(_key_)** is a Promise and expects the object key you're looking for in Memory_Storage
+
+mem.remove(key) allows your to remove an object from memory
+
+To make use of this, you'll need to know the key you need to find and use the .then() method to get that key's value
+
+Let's work with the macro called "otherMacro"
+
+For Example
+```javascript
+var memory = {
+    "key": "value",
+    "myGlobalVar": "[a-zA-Z]",
+    "myMacro": {
+        "myLocalVar": "$2,000"
+    },
+    "otherMacro": {
+        "icecream": "['chocolate', 'strawberry', 'vanilla']",
+        "pizza": "['pepperoni', 'cheese', 'bacon']"
+    },
+    "myTestMacro": {
+        "myInfo": "ABC123" //<<<-- new Information Here!
+    }
+}
+```
+We have 2 objects in "otherMacro", let's remove "icecream" from this, because I'd much prefer pizza over icecream :stuck_out_tongue_closed_eyes:
+But let's also use mem.read.global() to see all the changes happening to the memory of "otherMacros"
+
+```javascript
+mem.read.global('otherMacro').then((value) => {
+    console.log(value)
+    mem.remove('icecream').then(()=>{
+        mem.read.global('otherMacro').then((otherValue) => {
+            console.log(otherValue)
+        })
+    })
+    /*
+    Console will print:
+    13:51:14 otherMacro	> { icecream: '[\'chocolate\', \'strawberry\', \'vanilla\']',
+                            pizza: '[\'pepperoni\', \'cheese\', \'bacon\']' }
+    13:51:15 otherMacro	> 'WARNING: Local Object Key {"icecream" : "[\'chocolate\', \'strawberry\', \'vanilla\']"} has been deleted from Memory_Storage. Deletion occurred in script "otherMacro"'
+    13:51:15 otherMacro	> { pizza: '[\'pepperoni\', \'cheese\', \'bacon\']' }
+    */
+});
+```
+
+Notice how we get an additional console message with a warning, this is telling use we removed information from our Memory_Storage macro and makes for a great tool while troubleshooting to see if you accidentally removed the wrong information.
+
+### mem.remove(key)
+
+**mem.remove.global(_key_)** is a Promise and expects the object key you're looking for in Memory_Storage
+
+Just like mem.write.global(), this will remove a key at the top level of your Memory_Storage script
+
+refer to the example in mem.remove for use
+
+### mem.print() && mem.print.global()
+
+**mem.print()** and **mem.print.global()** are not functions with a promise, so the .then() method won't necessarily work here.
+
+These functions are meant to be a streamlined way to print your memory information to the console without having to use mem.read or mem.read.global several times throughout your script.
+
+**mem.print()** will print all information found in the Memory_Storage of the script your working in.
+
+An example log for a macro named "otherMacro" will print the following
+
+```txt
+14:33:11	otherMacro	>	{ icecream: '[\'chocolate\', \'strawberry\', \'vanilla\']',
+                        pizza: '[\'pepperoni\', \'cheese\', \'bacon\']' }
+```
+
+**mem.print.gobal()** will print all information found in the entire Memory_Storage script
+
+An example log for the same macro named "otherMacro" will print the following
+
+```txt
+14:33:38	otherMacro	>	{ key: 'value',
+                        myGlobalVar: '[a-zA-Z]',
+                        myMacro: { myLocalVar: '$2,000' },
+                        otherMacro: 
+                           { icecream: '[\'chocolate\', \'strawberry\', \'vanilla\']',
+                             pizza: '[\'pepperoni\', \'cheese\', \'bacon\']' },
+                        Test: { Test: 'Test' } }
+```
+
+Call these functions whenever you need a print out of your saved information.
+
+## Non-Exported Functions
+These functions are not exported for use, they help run a initial set-up on the Memory_Functions Script
+
+* getSourceScriptName()
+  * This script, which can be export if needed, is responsible for getting the name of the local script
+  * It technically causes a crash, but as of December 2020, this is the only way for us to discover the script name
+* memoryInit()
+  * This check to see if you have a Memory_Storage script on your endpoint, if not, it will create one for you
+* importMem()
+  * This check to see if any scripts outside of Memory_Functions and Memory_Storage have 
+  ```javascript
+  import { mem } from './Memory_Functions';
+  ```
+  applied to them, they must contain the standard ```import xapi from 'xapi';``` for this to work, else nothing will happen.
