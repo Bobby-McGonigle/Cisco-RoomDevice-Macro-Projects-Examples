@@ -4,7 +4,7 @@
 
 This is the latest installment of Macro Memory Storage, and it has been completely re-written. If you had used **MemoryStorage.js** or **MemoryStorage_V2.js**, they are now in the [legacy](https://github.com/Bobby-McGonigle/Cisco-RoomDevice-Macro-Projects-Examples/tree/master/Macro%20Memory%20Storage/legacy) folder with the previous readme still contained here for reference. But you should check out this new one for sure :smirk:
 
-## Disclaimer
+## Note
 
 This Script was originally written by a colleague of mine and I had beta tested it. 
 
