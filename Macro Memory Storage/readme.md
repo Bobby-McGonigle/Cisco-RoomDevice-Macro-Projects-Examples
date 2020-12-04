@@ -6,11 +6,13 @@ This is the latest installment of Macro Memory Storage, and it has been complete
 
 ## Disclaimer
 
-This Script was originally written by a colleague of mine, and I had beta tested it. 
+This Script was originally written by a colleague of mine and I had beta tested it. 
 
-Through our tests, we found ways to optimize this script to be the best it can be in this Macro environment.
+Through our tests and subsequent re-writes, we found ways to optimize this script to be the best it can be in this Macro environment.
 
 Definitely a Co-Authored Script, details below :smiley:
+
+Many Thanks to Zacharie Gignac for kickstarting this script :smiley:
 
 ## Inspiration
 
