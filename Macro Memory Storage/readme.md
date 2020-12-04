@@ -52,7 +52,7 @@ Once all of that has processed (it's rather quick) you should be ready to make u
 
 ## Function List
 
-* [mem.write(key, value)](#mem.write(key, value))
+* [mem.write(key, value)](#mem.write(key,-value))
 * mem.write.global(key, value)
 * mem.read(key)
 * mem.read.global(key)
