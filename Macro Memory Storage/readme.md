@@ -389,7 +389,7 @@ These functions are meant to be a streamlined way to print your memory informati
 An example log for a macro named "otherMacro" will print the following
 
 ```txt
-14:33:11	otherMacro	>	{ icecream: '[\'chocolate\', \'strawberry\', \'vanilla\']',
+14:33:11 otherMacro > { icecream: '[\'chocolate\', \'strawberry\', \'vanilla\']',
                         pizza: '[\'pepperoni\', \'cheese\', \'bacon\']' }
 ```
 
@@ -398,7 +398,7 @@ An example log for a macro named "otherMacro" will print the following
 An example log for the same macro named "otherMacro" will print the following
 
 ```txt
-14:33:38	otherMacro	>	{ key: 'value',
+14:33:38 otherMacro > { key: 'value',
                         myGlobalVar: '[a-zA-Z]',
                         myMacro: { myLocalVar: '$2,000' },
                         otherMacro: 
