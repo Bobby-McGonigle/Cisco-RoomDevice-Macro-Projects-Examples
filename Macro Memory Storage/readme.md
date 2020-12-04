@@ -53,15 +53,15 @@ Once all of that has processed (it's rather quick) you should be ready to make u
 ## Function List
 
 * [mem.write(key, value)](#memwritekey-value)
-* mem.write.global(key, value)
-* mem.read(key)
-* mem.read.global(key)
-* mem.remove(key)
-* mem.remove.global(key)
-* mem.print()
-* mem.print.global()
+* [mem.write.global(key, value)](#memwriteglobalkey-value)
+* [mem.read(key)](#memreadkey)
+* [mem.read.global(key)](#memreadkeyglobal)
+* [mem.remove(key)](#memremovekey)
+* [mem.remove.global(key)](#memremovekeyglobal)
+* [mem.print()](#memprint)
+* [mem.print.global()](#memprint)
 
-For more detail on how to use these functions, please scroll to the of end of this readme. Details listed under **Function Details**
+For more detail on how to use these functions, please scroll to the of end of this readme. Details listed under **[Function Details](#function-details)**
 
 ## Getting Started
 * Go to [Memory_Functions.js](https://github.com/Bobby-McGonigle/Cisco-RoomDevice-Macro-Projects-Examples/blob/master/Macro%20Memory%20Storage/Memory_Functions.js)
