@@ -252,7 +252,7 @@ var memory = {
 }
 ```
 
-Notice that the Macro names are considered global, so you can overwrite them id necessary, so be mindful how you coordinate your information and use **.global()**
+Notice that the Macro names are considered global, so you can overwrite them if necessary, so be mindful how you coordinate your information and use **.global()**
 
 All example in mem.write() apply to mem.write.global()
 
