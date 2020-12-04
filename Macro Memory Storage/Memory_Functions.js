@@ -10,7 +10,7 @@
  * 
  * Description; Asynchronous read/write permanent memory
  * 
- * Use: Allow the storage of persistant information while working within the Macro editor of Cisco Video Room Devices
+ * Use: Allow the storage of persistent information while working within the Macro editor of Cisco Video Room Devices
  * For more information, please refer to the 
  */
 
@@ -131,7 +131,7 @@ mem.read.global = function (key) {
       if (store[key] != undefined) {
         resolve(store[key])
       } else {
-        reject(new Error('Glabal Read Error. Object Key: "' + key + '" not found in \'' + config.storageMacro + '\''))
+        reject(new Error('Global Read Error. Object Key: "' + key + '" not found in \'' + config.storageMacro + '\''))
       }
     })
   });
@@ -216,7 +216,7 @@ mem.remove = function (key) {
         },
           `var memory = ${newStore}`
         ).then(() => {
-          console.warn('WARNING: Local Object Key {"' + key + '" : "' + track + '"} has been deleted from ' + config.storageMacro + '. Deletetion occured in script "' + localStore + '"')
+          console.warn('WARNING: Local Object Key {"' + key + '" : "' + track + '"} has been deleted from ' + config.storageMacro + '. Deletion occurred in script "' + localStore + '"')
           resolve(key);
         });
       } else {
@@ -243,7 +243,7 @@ mem.remove.global = function (key) {
         },
           `var memory = ${newStore}`
         ).then(() => {
-          console.warn('WARNING: Global Object Key {"' + key + '" : "' + track + '"} has been deleted from ' + config.storageMacro + '. Deletetion occured in script "' + getSourceScriptName() + '"')
+          console.warn('WARNING: Global Object Key {"' + key + '" : "' + track + '"} has been deleted from ' + config.storageMacro + '. Deletion occurred in script "' + getSourceScriptName() + '"')
           resolve(key);
         });
       } else {
