@@ -22,6 +22,19 @@ The original was limited, required a bit of set-up and wasted a facility service
 
 With the enhancements of the Macro Editor in ce9.14 and Higher, we can make a more refined version eliminating those constraints.
 
+## Function List
+
+For more detail on how to use these functions, please scroll to the of end of this readme. Details listed under **[Function Details](#function-details)**
+
+* [mem.write(key, value)](#memwritekey-value)
+* [mem.write.global(key, value)](#memwriteglobalkey-value)
+* [mem.read(key)](#memreadkey)
+* [mem.read.global(key)](#memreadkeyglobal)
+* [mem.remove(key)](#memremovekey)
+* [mem.remove.global(key)](#memremovekeyglobal)
+* [mem.print()](#memprint--memprintglobal)
+* [mem.print.global()](#memprint--memprintglobal)
+
 ## What You'll Need
 * A compatible Endpoint
   * Sx20, Sx80, Mx Series, Dx Series
@@ -56,25 +69,29 @@ Directions for a manual import will be shown later on in this document.
 
 Once all of that has processed (it's rather quick) you should be ready to make use of all of the functions available
 
-## Function List
-
-For more detail on how to use these functions, please scroll to the of end of this readme. Details listed under **[Function Details](#function-details)**
-
-* [mem.write(key, value)](#memwritekey-value)
-* [mem.write.global(key, value)](#memwriteglobalkey-value)
-* [mem.read(key)](#memreadkey)
-* [mem.read.global(key)](#memreadkeyglobal)
-* [mem.remove(key)](#memremovekey)
-* [mem.remove.global(key)](#memremovekeyglobal)
-* [mem.print()](#memprint)
-* [mem.print.global()](#memprint)
-
 ## Getting Started
 * Go to [Memory_Functions.js](https://github.com/Bobby-McGonigle/Cisco-RoomDevice-Macro-Projects-Examples/blob/master/Macro%20Memory%20Storage/Memory_Functions.js)
 * Copy and Paste the contents of this script in a as a new macro on your Cisco Room Device
   * Label this Macro **Memory_Functions**
 * Save the script, and toggle it on. This should begin to work immediately
   * Be sure to refresh your browser when it's done :smiley:
+
+## Configuration Menu
+Starting on line 20 of [Memory_Functions.js](https://github.com/Bobby-McGonigle/Cisco-RoomDevice-Macro-Projects-Examples/blob/master/Macro%20Memory%20Storage/Memory_Functions.js), there is a small configuration menu where you can make some changes.
+
+```javascript
+var config = {
+  "storageMacro": "Memory_Storage",
+  "autoImport": "false",
+}
+```
+**config.storageMacro** : This is the name of the Storage Macro for Memory_Functions, feel free to rename this as needed.
+* Note: Once changed, your previous Storage macro and will be innaccessible to the script.
+
+**config.autoImport**: This accepts the boolean values true or false. This also accept the string "activeOnly
+* true : Will add ```import { mem } from ‘./Memory_Functions``` to any script that contains ```import xapi from ‘xapi’```
+* false : Disables autoImport
+* "activeOnly : Case sensitive; Will add ```import { mem } from ‘./Memory_Functions``` to any script **ACTIVE SCRIPT** that contains ```import xapi from ‘xapi’```
 
 ## Things to consider
 * We're always looking for way to improve this script, if you have an idea, send it along :smiley:
@@ -376,7 +393,7 @@ mem.read.global('otherMacro').then((value) => {
 
 Notice how we get an additional console message with a warning, this is telling use we removed information from our Memory_Storage macro and makes for a great tool while troubleshooting to see if you accidentally removed the wrong information.
 
-### mem.remove(key)
+### mem.remove.global(key)
 
 **mem.remove.global(_key_)** is a Promise and expects the object key you're looking for in Memory_Storage
 
