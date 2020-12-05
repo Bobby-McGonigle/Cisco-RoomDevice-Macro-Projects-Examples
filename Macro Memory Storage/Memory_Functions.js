@@ -11,13 +11,15 @@
  * Description; Asynchronous read/write permanent memory
  * 
  * Use: Allow the storage of persistent information while working within the Macro editor of Cisco Video Room Devices
- * For more information, please refer to the 
+ * For more information, please refer to the guide at
+ * https://github.com/Bobby-McGonigle/Cisco-RoomDevice-Macro-Projects-Examples/tree/master/Macro%20Memory%20Storage
  */
 
 import xapi from 'xapi';
 
 var config = {
-  "storageMacro": "Memory_Storage"
+  "storageMacro": "Memory_Storage", //Name for Storage Macro
+  "autoImport": "false", //Use: <boolean, "activeOnly">
 }
 
 export { mem }
@@ -74,13 +76,44 @@ function importMem() {
         let filter = event.Macro[i].Content.search("Memory_Functions")
         if (filter < 0 && event.Macro[i].Name != 'Memory_Functions') {
           if (event.Macro[i].Name != config.storageMacro) {
-            let addImport = event.Macro[i].Content.replace(regex, "import xapi from \'xapi\';\n\nimport { mem } from \'./Memory_Functions\';\n\n")
-            xapi.command('Macros Macro Save', {
-              Name: event.Macro[i].Name
-            },
-              `${addImport}`
-            )
-            console.debug("Added \"import { mem } from './Memory_Functions'\" to Macro: " + event.Macro[i].Name)
+            switch (config.autoImport) {
+              case true:
+              case "true":
+                console.log("Added \"import { mem } from './Memory_Functions'\" to Macro: " + event.Macro[i].Name)
+                let addImport = event.Macro[i].Content.replace(regex, "import xapi from \'xapi\';\n\nimport { mem } from \'./Memory_Functions\';\n\n")
+                xapi.command('Macros Macro Save', {
+                  Name: event.Macro[i].Name
+                },
+                  `${addImport}`
+                )
+                break;
+              case false:
+              case "false":
+
+                break;
+              case 'activeOnly':
+                if (event.Macro[i].Active === 'True') {
+                  console.log("Added \"import { mem } from './Memory_Functions'\" to Macro: " + event.Macro[i].Name)
+                  let addImport = event.Macro[i].Content.replace(regex, "import xapi from \'xapi\';\n\nimport { mem } from \'./Memory_Functions\';\n\n")
+                  xapi.command('Macros Macro Save', {
+                    Name: event.Macro[i].Name
+                  },
+                    `${addImport}`
+                  )
+                } else {
+
+                }
+                break;
+              default:
+                let error = {
+                  "Type": "Configuration Error",
+                  "message": "config.autoImport does not accept { " + config.autoImport + " } as a value. Defaulting to false.",
+                  "Solution": " Accepted Values for config.autoImport are [true, false, \"activeOnly\"]",
+                  "Macro": event.Macro[i].Name
+                }
+                console.error(error)
+                break;
+            }
           }
         } else {
 
@@ -93,7 +126,7 @@ function importMem() {
 
 memoryInit().then(() => {
   importMem();
-});
+})
 
 mem.read = function (key) {
   return new Promise((resolve, reject) => {
