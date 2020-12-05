@@ -54,7 +54,7 @@ This new macro will work alongside the Memory_Functions Macro as your main stora
 
 You won't see this at first, so please **refresh your page** :smiley:
 
-In addition to generating the storage repo for your endpoint, it will also search your endpoint for any script that do no have the Memory Functions imported and will edit each macro to provide an import.
+In addition to generating the storage repo for your endpoint, it will also search your endpoint for any script that do no have the Memory Functions imported and will edit each macro to provide an import. **NOTE**: This is disabled by default, but can be enabled in the configurations menu if wanting to apply this to all scripts.
 
 This search relies on your endpoint having the following string available
 
@@ -73,11 +73,17 @@ Once all of that has processed (it's rather quick) you should be ready to make u
 * Go to [Memory_Functions.js](https://github.com/Bobby-McGonigle/Cisco-RoomDevice-Macro-Projects-Examples/blob/master/Macro%20Memory%20Storage/Memory_Functions.js)
 * Copy and Paste the contents of this script in a as a new macro on your Cisco Room Device
   * Label this Macro **Memory_Functions**
+* Make changes to the configuration menu on line 20
 * Save the script, and toggle it on. This should begin to work immediately
   * Be sure to refresh your browser when it's done :smiley:
 
+**Note**: If autoImport is set to false, you will need to manually import the memory functions to each target script.
+
+Add
+```import { mem } from ‘./Memory_Functions``` to any script making use of **Memory_Functions**
+
 ## Configuration Menu
-Starting on line 20 of [Memory_Functions.js](https://github.com/Bobby-McGonigle/Cisco-RoomDevice-Macro-Projects-Examples/blob/master/Macro%20Memory%20Storage/Memory_Functions.js), there is a small configuration menu where you can make some changes.
+Starting on line 20 of [Memory_Functions.js](https://github.com/Bobby-McGonigle/Cisco-RoomDevice-Macro-Projects-Examples/blob/master/Macro%20Memory%20Storage/Memory_Functions.js), there is a small configuration menu where you can make some changes. More to come :smiley:
 
 ```javascript
 var config = {
@@ -85,10 +91,10 @@ var config = {
   "autoImport": "false",
 }
 ```
-**config.storageMacro** : This is the name of the Storage Macro for Memory_Functions, feel free to rename this as needed.
+**config.storageMacro** : This is the name of the Storage Macro for Memory_Functions, feel free to rename this as you see fit.
 * Note: Once changed, your previous Storage macro and will be innaccessible to the script.
 
-**config.autoImport**: This accepts the boolean values true or false. This also accept the string "activeOnly
+**config.autoImport**: This accepts the boolean values true and false. This also accepts the string "activeOnly
 * true : Will add ```import { mem } from ‘./Memory_Functions``` to any script that contains ```import xapi from ‘xapi’```
 * false : Disables autoImport
 * "activeOnly : Case sensitive; Will add ```import { mem } from ‘./Memory_Functions``` to any script **ACTIVE SCRIPT** that contains ```import xapi from ‘xapi’```
