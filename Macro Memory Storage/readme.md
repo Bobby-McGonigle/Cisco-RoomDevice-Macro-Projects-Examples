@@ -84,8 +84,8 @@ var config = {
 
 ## Things to consider
 * We're always looking for way to improve this script, if you have an idea, send it along :smiley:
-* Some of these functions **rely on crashing your script** to get the script name. It currently does not effect anything, and works reliably on ce9.14 and higher. Current Date Dec 2020
-  * So far it works, but we wanted you to know. We're hoping to find a way to have a script, discover it's own name. At them moment, this is the only way :sweat_smile:
+* The function getSourceScriptName(), found in Memory_Functions, **relies on crashing your script** to get the script name. It currently does cause any issues and works reliably on ce9.14 and higher. Current Date Dec 2020
+  * So far it works, but we wanted you to know. We're hoping to find a better way to have a script discover it's own name. At them moment, this is the only way :sweat_smile:
 
 ## Author(s)
 * Zacharie Gignac - Original Author and Project Lead
@@ -469,9 +469,9 @@ These functions are not exported for use, they help run a initial set-up on the 
   * This script, which can be export if needed, is responsible for getting the name of the local script
   * It technically causes a crash, but as of December 2020, this is the only way for us to discover the script name
 * memoryInit()
-  * This check to see if you have a Memory_Storage script on your endpoint, if not, it will create one for you
+  * This checks to see if you have a Memory_Storage script on your endpoint, if not, it will create one for you
 * importMem()
-  * This check to see if any scripts outside of Memory_Functions and Memory_Storage have 
+  * This checks to see if any scripts outside of Memory_Functions and Memory_Storage have 
   
   ```javascript
   import { mem } from './Memory_Functions';
