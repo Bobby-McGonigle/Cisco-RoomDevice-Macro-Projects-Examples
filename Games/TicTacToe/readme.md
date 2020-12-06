@@ -8,7 +8,7 @@ Since creating the Dice Roller script, I thought "How could we not only engage u
 
 If your team can play together, they can build together.
 
-I also wanted to illustrate how the Cisco Room Series can be adapted in a way to create new experience, solve new and unique tasks, and open up the realm of possibilities available to us through the xApi and the Macro Editor.
+I also wanted to illustrate how the Cisco Room Series can be adapted in a way to create new experiences, solve new and unique tasks, and open up the realm of possibilities available to us through the xApi and the Macro Editor.
 
 ## What you'll need
 
@@ -16,6 +16,7 @@ I also wanted to illustrate how the Cisco Room Series can be adapted in a way to
   * Sx, Dx, MxG2, Room, Desk or board series (excluding Sx10)
 * Admin Access to the endpoint
 * Some knowledge of the Macro Editor
+* Some knowledge of the UI Extensions Editor
 * A couple of players
 
 ## How this Script works
@@ -30,23 +31,23 @@ If you select the Tic Tac Toe button you could be greeted with one of 2 options.
 
 If the game board is empty, you'll go right into a new game
 
-![]()
+![New Game](https://github.com/Bobby-McGonigle/Cisco-RoomDevice-Macro-Projects-Examples/blob/master/Games/TicTacToe/images/02_NewGame.png)
 
-If the game board has had some play to it already, then you'll be given a choice on whether or not you'd like to continue
+If the game board has had some play to it already, then you'll be given a choice on whether or not you'd like to continue that game or start a new game.
 
-![]()
+![Continue from last game](https://github.com/Bobby-McGonigle/Cisco-RoomDevice-Macro-Projects-Examples/blob/master/Games/TicTacToe/images/08_ContinueFromLast.png)
 
 The active turn of either player [X] or player [O] will show on the top most row of the game board.
 
-To make your move, simply select on of the empty squares and it will then update the board and pass turns to the next player.
+To make your move, simply select one of the empty squares and it will then update the board with your teams symbol and pass turns to the next player.
 
-You'll notice a bit of lag time between each move. At this time, in order to make any visual changes to buttons, a new XML file will need to be loaded into the board. This new UI will be built, based on the current input of the game and be loaded in. 
+You'll notice a bit of lag time between each move. At this time, in order to make any visual changes to buttons, a new XML file will need to be loaded into the board. This new UI will be built, based on the current input of the game, and be loaded into the UserInterface. 
 
-Once a player has achieve a "3 in a row" sequence, a prompt will display indicating the winner and the game board will be reset.
+Once a player has achieved a "3 in a row" sequence, a prompt will display indicating the winner and the game board will be reset.
 
-![]()
+![](https://github.com/Bobby-McGonigle/Cisco-RoomDevice-Macro-Projects-Examples/blob/master/Games/TicTacToe/images/06_XWon.png)
 
-From here, you can wither choose to play again, or end your session.
+From here, you can either choose to play again, or end your session.
 
 One last note, for those admins working remote. If you need to settle a dispute of who won, a full log will show on the endpoint's macro console :nerd_face:
 
@@ -87,17 +88,17 @@ Have Fun!
   * Copy the contents into a text editor and save them as ```D&D_DiceRoller.js```
   * Log into your video endpoint as an admin
   * Go to the macro editor
-  * Load in this script, save and enable
+  * Load in this script, save and activate
 
 As mentioned before, the UI will load in for you, the game should be ready to play :smiley:
 
 ## Things to Consider
 
-* Though this is a simple game, it makes good use of reformatting the UserInterface. This could serve as an example to make the UI of the Room series more dynamic and adaptive.
+* Though this is a simple game, it makes good use of editing the UserInterface. This could serve as an example to make the UI of the Room series more dynamic and adaptive based on user input, or the system's state.
 
 * Try to make this a multiplayer game. A good place to start would be exploring BOTs and the HTTPClient xCommands
 
-* Getting people to collaborate can be a challenge at times, so why build some fun into the office
+* Getting people to collaborate can be a challenge at times, so why not build some fun into the office
 
 ## Author(s)
 
