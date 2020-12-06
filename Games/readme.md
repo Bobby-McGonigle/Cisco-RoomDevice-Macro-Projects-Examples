@@ -6,11 +6,11 @@ Getting your team to work together can have it's challenges, but I'm sure a puzz
 
 Collaborative technologies are great but it's nothing without the people who make them or the people who use them.
 
-So let's get our users to collaborate and grow together
+So let's get our users to collaborate and grow together with a couple of games!
 
 |Game|Description|Players|
 |:---|:---|:---|
-|[Dice Roller](https://github.com/Bobby-McGonigle/Cisco-RoomDevice-Macro-Projects-Examples/tree/master/Games/Dice%20Roller)|Dice Roller built around the Dungeons and Dragons. Though it can be used to facilitate your Dice needs in any fashion|N/A|
+|[Dice Roller](https://github.com/Bobby-McGonigle/Cisco-RoomDevice-Macro-Projects-Examples/tree/master/Games/Dice%20Roller)|Dice Roller built around Dungeons and Dragons. Though it can be used to facilitate your Dice needs in any fashion|N/A|
 |[Tic Tac Toe](https://github.com/Bobby-McGonigle/Cisco-RoomDevice-Macro-Projects-Examples/tree/master/Games/TicTacToe)|A simple game of Tic Tac Toe, great for Ice Breakers, Decision Making, or if someone is running late to a meeting :wink:|2 Player|
 
 # Image Gallery
