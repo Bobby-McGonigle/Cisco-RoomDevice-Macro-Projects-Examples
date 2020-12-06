@@ -2,29 +2,19 @@
 
 ### News!
 
-This is the latest installment of Macro Memory Storage, and it has been completely re-written. If you had used **MemoryStorage.js** or **MemoryStorage_V2.js**, they are now in the [legacy](https://github.com/Bobby-McGonigle/Cisco-RoomDevice-Macro-Projects-Examples/tree/master/Macro%20Memory%20Storage/legacy) folder with the previous readme still contained here for reference. But you should check out this new one for sure :smirk:
-
-## Note
-
-This Script was originally written by a colleague of mine and I had beta tested it. 
-
-Through our tests and subsequent re-writes, we found ways to optimize this script to be the best it can be in this Macro environment.
-
-Definitely a Co-Authored Script, details below :smiley:
-
-Many Thanks to Zacharie Gignac for kickstarting this script :smiley:
+This is the latest installment of Macro Memory Storage and it has been completely re-written. If you had used **MemoryStorage.js** or **MemoryStorage_V2.js** they are now in the [legacy](https://github.com/Bobby-McGonigle/Cisco-RoomDevice-Macro-Projects-Examples/tree/master/Macro%20Memory%20Storage/legacy) folder with the previous readme still contained here for reference. But you should check out this new one for sure :smirk:
 
 ## Inspiration
 
-The need for a better and more robust version of the initial Macro Memory script
+The need for a better and more robust version of the initial Macro Memory script.
 
-The original was limited, required a bit of set-up and wasted a facility service slot
+The original was limited, required a bit of set-up and wasted a facility service slot.
 
 With the enhancements of the Macro Editor in ce9.14 and Higher, we can make a more refined version eliminating those constraints.
 
 ## Function List
 
-For more detail on how to use these functions, please scroll to the of end of this readme. Details listed under **[Function Details](#function-details)**
+For more detail on how to use these functions, please scroll to the of end of this readme. Details listed under **[Function Details](#function-details)** or click on any of these hyperlinks to jump to any of these functions.
 
 * [mem.write(key, value)](#memwritekey-value)
 * [mem.write.global(key, value)](#memwriteglobalkey-value)
@@ -43,44 +33,34 @@ For more detail on how to use these functions, please scroll to the of end of th
 * Room Device on CE9.14.X or greater, or Stable Cloud Channel
 * Some Knowledge on the Macro Editor
 * Some Knowledge on Javascript
-* Some Knowledges on Importing/Exporting Modules
+* Some Knowledge on Importing/Exporting Modules
 
 ## How does the script work
 
 When "**Memory_Functions**" is activated on your endpoint, it will generate a new Macro called "**Memory_Storage**" by default.
   * This will not re-generate a new one if one already exists on your endpoint :smiley:
 
-This new macro will work alongside the Memory_Functions Macro as your main storage repository
+This new Memory_Storage macro will work alongside the Memory_Functions Macro as your main storage repository
 
-You won't see this at first, so please **refresh your page** :smiley:
+You won't see this at first, so please **refresh your page** to see this change apply :smiley:
 
-In addition to generating the storage repo for your endpoint, it will also search your endpoint for any script that do no have the Memory Functions imported and will edit each macro to provide an import. **NOTE**: This is disabled by default, but can be enabled in the configurations menu if wanting to apply this to all scripts.
+In addition to generating the storage repo for your endpoint, it will also search your endpoint for any script that do no have the Memory Functions imported and will edit each macro to provide an import. **NOTE**: This is disabled by default, but can be enabled in the configurations menu if wanting to run this on all scripts.
 
-This search relies on your endpoint having the following string available
-
-```javascript
-import xapi from 'xapi';
-```
-
-Once you see the import messages stop in the console, once again, **refresh the page** :smiley:
-
-This is the default string found in all newer scripts by default. If your script does not have this string, then the automatic import will fail.
-Directions for a manual import will be shown later on in this document.
-
-Once all of that has processed (it's rather quick) you should be ready to make use of all of the functions available
+Once all of that has processed (it's rather quick) you should be ready to make use of all of the functions available in Memory_Functions
 
 ## Getting Started
 * Go to [Memory_Functions.js](https://github.com/Bobby-McGonigle/Cisco-RoomDevice-Macro-Projects-Examples/blob/master/Macro%20Memory%20Storage/Memory_Functions.js)
 * Copy and Paste the contents of this script in a as a new macro on your Cisco Room Device
   * Label this Macro **Memory_Functions**
-* Make changes to the configuration menu on line 20
-* Save the script, and toggle it on. This should begin to work immediately
-  * Be sure to refresh your browser when it's done :smiley:
+* Make changes to the configuration menu on line 20 of the script
+* Save the script and toggle it on. This should begin to work immediately
+  * Be sure to refresh your browser when it's done to see all the changes apply :smiley:
 
 **Note**: If autoImport is set to false, you will need to manually import the memory functions to each target script.
 
-Add
-```import { mem } from ‘./Memory_Functions``` to any script making use of **Memory_Functions**
+To manually import Memory_Functions, simply add this line of code to any of your scripts
+
+```import { mem } from ‘./Memory_Functions```
 
 ## Configuration Menu
 Starting on line 20 of [Memory_Functions.js](https://github.com/Bobby-McGonigle/Cisco-RoomDevice-Macro-Projects-Examples/blob/master/Macro%20Memory%20Storage/Memory_Functions.js), there is a small configuration menu where you can make some changes. More to come :smiley:
@@ -96,8 +76,11 @@ var config = {
 
 **config.autoImport**: This accepts the boolean values true and false. This also accepts the string "activeOnly
 * true : Will add ```import { mem } from ‘./Memory_Functions``` to any script that contains ```import xapi from ‘xapi’```
+  * Note: Once aplied to a script, it will not reverse the import when changed to false.
 * false : Disables autoImport
+  * Note: This will not remove any previously run imports
 * "activeOnly : Case sensitive; Will add ```import { mem } from ‘./Memory_Functions``` to any script **ACTIVE SCRIPT** that contains ```import xapi from ‘xapi’```
+  * Note: Once aplied to a script, it will not reverse the import when change to false.
 
 ## Things to consider
 * We're always looking for way to improve this script, if you have an idea, send it along :smiley:
