@@ -8,13 +8,13 @@ Well at least a French speaking colleague of mine in Canada :smiley:.
 
 For those familiar with classroom mode on a Room Kit plus, Sx80, or Room Kit Pro Room device by Cisco, it's clear that this is running off of a back-end macro script we don't have access too normally.
 
-To my surprise, I learn from a good bi-lingual friend of mine that the Classroom Mode script, as of 10-19-2020 (Could change in the future), only generate the Classroom mode UI in English.
+To my surprise, I learn from a good bi-lingual friend of mine that the Classroom Mode script, as of 10-19-2020 (Could change in the future), only generates the Classroom mode UI in English.
 
 I would have never known as I only speak English, but that could be up for debate as well :wink:
 
-I decided to help out my friend, and as many others as I could with Google translate and volunteers to help expand the language portfolio of the Classroom Mode UI.
+I decided to help out my friend, and as many others as I could with Google translate and volunteered to help expand the language portfolio of the Classroom Mode UI.
 
-Luckily for us, even though the script is hidden, the UI Extensions are exposed, so we can target them with new text :smirk:
+Luckily for us, even though the script is hidden, the UI Extensions are exposed, so we can update them with new text :smirk:
 
 ## Goal
 
@@ -52,7 +52,7 @@ Luckily for us, even though the script is hidden, the UI Extensions are exposed,
 The script will reference the Language set on the Cisco Room Device
 * If a language profile of the same type exists in the script, it will push the new language to the Widget Values of the Classroom UI
 
-* This script will poll the language field every 5 seconds, so if you we're to change languages with another script or remotely, the UI will update within 5 seconds if that language is available
+* This script will poll the language field every 5 seconds, so if you we're to change languages with another script or remotely, the UI will update within 5 seconds if that language has a translation available
 
 * If the language profile has not been added, then it will default the the standard English text
 
@@ -118,9 +118,9 @@ var classRoomLang = {
 
 Be sure to follow the same format and test
 
-Supported system languages can be found under the configuration item ```xConfiguration UserInterface Language```
+Supported system languages can be found under the configuration item ```xConfiguration UserInterface Language``` in the [xApi](https://www.cisco.com/c/en/us/support/collaboration-endpoints/spark-room-kit-series/products-command-reference-list.html) guide from Cisco.
 
-Be sure to match the case of these languages
+Be sure to match the case too.
 
 ## Getting Started
 
@@ -136,7 +136,7 @@ The script should be up and running!
   * Hopefully Cisco will address this native Tool properly in the future
 
 * Try connecting this to the Google Translate APIs and automate the process
-  * Better yet, can you make a universal translator for All Macro scripts using Google :wink:
+  * Better yet, can you make a universal translator for All custom UI using Google Translate APIs :wink:
 
 ## Author(s)
 
