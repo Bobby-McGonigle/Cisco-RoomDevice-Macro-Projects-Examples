@@ -2,9 +2,9 @@
 
 Social distancing has been in effect for a while, like you, I have taken solace in the world of video.
 
-Every Saturday, me and 6 other friend take part in a [Webex Teams](https://www.webex.com/team-collaboration.html) call and played Dungeons and Dragons.
+Every Saturday, me and 6 other friends take part in a [Webex Teams](https://www.webex.com/team-collaboration.html) call and play Dungeons and Dragons together.
 
-Judging by this repository, you can probably tell I work with Cisco Room devices, and before the lockdown, I brought one home to continue my work and well, enjoy the quality of a hardware driven experience.
+Judging by this repository, you can probably tell I work with Cisco Room devices, and before the COVID lockdown, I brought one home to continue my work and well, enjoy the quality of a hardware driven experience.
 
 ![D&D Session](https://github.com/Bobby-McGonigle/Cisco-RoomDevice-Macro-Projects-Examples/blob/master/Games/Dice%20Roller/Images/example.jpg)
 
@@ -34,7 +34,7 @@ So for those who are avid players or have a need to showcase random numbers in m
 
 A user will select a die to roll, then you'll get a pop up of the result, and it will take that result and store it to refer to later if needed.
 
-Those lucky players will even get a congrats when rolling a natural 20
+Those lucky players will even get a congrats when rolling a natural 20!
 
 ![Nat20](https://github.com/Bobby-McGonigle/Cisco-RoomDevice-Macro-Projects-Examples/blob/master/Games/Dice%20Roller/Images/05_Nat20.png)
 
