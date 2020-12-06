@@ -121,6 +121,8 @@ var config = {
 
 For the purposes of these function descriptions/guide we will be referencing the below **Memory_Storage** example
 
+Feel free to copy thse contents into your **Memory_Storage** script and follow along.
+
 ```javascript
 var memory = {
     "key": "value",
@@ -149,13 +151,13 @@ All functions under ```var mem``` are exported. These are:
 
 ### mem.write(key, value)
 
-**mem.write(_key_, _value_)** is a Promise and expects an object key and a value to assign that object. 
+**mem.write(_key_, _value_)** is a Promise and expects an object key and a value to assign that object as parameters. 
 
-This is also a function that effects the script your currently working in. That way you can work in each script independently, without having to worry if you're mixing information with another macro. All non **.global()** functions only effect the script you're working in.
+This is also a function that only effects the script your currently working in. That way you can work in each script independently, without having to worry if you're mixing information in your Memory_Storage script with another macro. All non **.global()** mem functions only effect the script you're working with.
 
 Let's create a new macro called "myTestMacro"
 
-In this macro, let's write a new piece of information.
+In this macro, let's write a new piece of information using mem.write
 
 ```javascript
 import xapi from 'xapi';
@@ -164,7 +166,7 @@ import { mem } from './Memory_Functions';
 
 mem.write('myInfo', 'ABC123')
 ```
-Save this script, once it runs, refresh your browser and you will see this new piece of information written to our **Memory_Storage** Macro as
+Save this script, once it runs, _refresh your browser_ and you will see this new piece of information written to the **Memory_Storage** Macro as
 
 ```javascript
 var memory = {
@@ -177,20 +179,20 @@ var memory = {
         "icecream": "['chocolate', 'strawberry', 'vanilla']",
         "pizza": "['pepperoni', 'cheese', 'bacon']"
     },
-    "myTestMacro": {
-        "myInfo": "ABC123" //<<<-- new Information Here!
+    "myTestMacro": { //<<<-- Where did this value come from?
+        "myInfo": "ABC123" //<<<-- Your newly written object is Here!
     }
 }
 ```
-Notice how, in our example above, we did not have a object called "myTestMacro". What mem.write() will do, is add in the name will create an object named after the macro you're working in and created a nested object of the information you want to write :smiley:
+Notice how, in our example above, we did not have an object called "**myTestMacro**". What mem.write() will do is use the name of the script your working with as a top level object then nest the information you had wrote as another object. Allowing us an area to save information for each script independently.
 
-This is how we're able to avoid other scripts from accessing information they don't necessarily need
+This is how we're able to avoid other scripts from accessing information they don't necessarily need :smiley:
 
 #### What if I want to right more that just 1 piece of information?
-* You can, but you need to be mindful that this process needs to resolve a promise first before it rights, so syntax is Key for a successful write
+* You can, but you need to be mindful that this process needs to resolve a promise first before it can fully write, so syntax is important for a successful write
 
-### Writing style A (preferred)
-Build a nested object locally in your macro then write this object when it's finished being built
+### Writing Style A (preferred)
+Build a nested object in your macro then write this object when it's finished being modified in your script.
 
 For example
 
@@ -199,11 +201,11 @@ import xapi from 'xapi';
 
 import { mem } from './Memory_Functions';
 
-var myNestedObject = {
+var myNestedObject = { //<<<-- Declare an object
     "newObject" : "Hello from New Object"
 }
 
-myNestedObject["anotherObject"] = { 
+myNestedObject["anotherObject"] = { //<<<-- Add more to that object
                                     "Test_A": "3.127",
                                     "Test_B": "8.625"
                                    }
@@ -218,14 +220,14 @@ Printed in Console
                     }
 */
 
-mem.write('myNestedObject', myNestedObject)
+mem.write('myNestedObject', myNestedObject) //<<<-- Then write that object to memory
 ```
 
 Style A will allow you to quickly build your information and store it all at once
 
-### Writing style B
+### Writing Style B
 
-If you need to write multiple nest objects, then either make build a larger nested object with all the information or chain your mem.write functions
+If you need to write multiple nested objects, then either build a larger nested object in your script or chain your mem.write promises
 
 For example
 ```javascript
@@ -233,12 +235,12 @@ import xapi from 'xapi';
 
 import { mem } from './Memory_Functions';
 
-var myNestedObject = {
+var myNestedObject = { //<<<-- Declare an object
     "newObject" : "Hello from New Object",
     "secondObject" : "Hello from Second Object"
 }
 
-var myOtherObject = {
+var myOtherObject = { //<<<-- Declare another object
     "Test_A" : "3.127",
     "Test_B": "8.625",
     "Results" : {
@@ -248,25 +250,25 @@ var myOtherObject = {
 }
 
 
-mem.write('myNestedObject', myNestedObject).then(()=>{
-  mem.write('myOtherObject', myOtherObject).the(()=>{
+mem.write('myNestedObject', myNestedObject).then(()=>{ //<<<-- Write that first object and the .then() method to run more code when the promise resolves
+  mem.write('myOtherObject', myOtherObject).the(()=>{ //<<<-- Then write your second object
     //Keep Chaining as need or run other code when complete
   })
 })
 ```
-Though Style A is preferred, Style be may be a necessary alternative to right, depending on your use case.
+Though **Style A** is preferred, **Style B** may be a necessary alternative to write depending on your use case.
 
-### Before we move on
-Most other functions we'll cover makes us of the same principles detailed in mem.write() for that, I won't be going as in depth in the remaining examples, to allow this document some breathing room :smiley:
+## Before we move on
+Most of the other functions we'll cover makes use of the same principles detailed in mem.write(); for that, I won't be going into as much depth in the remaining examples to avoid excessive reptition :smiley:
 
 ### mem.write._global_('key', 'value)
 
-**mem.write._global_(_key_, _value_)** is a Promise and expects an object key and a value to assign that object. 
+**mem.write._global_(_key_, _value_)** is a Promise and expects an object key and a value to assign that object as parameters.
 
-The main difference between mem.write() and mem.write.**global** is that this will allow you to save information at the top level of the Memory_Storage macro and can not be read by any non-global functions
-(well, unless you have a macro as the same name as an object you're trying to create :sweat_smile:)
+The main difference between mem.write() and mem.write.**global** is that mem.write.**global** will allow you to save information at the top level of the Memory_Storage macro and can not be accessed by any non-global _mem_ functions
+(well, unless you have a macro with the same name as an object you're trying to create :sweat_smile:)
 
-To identify what is global vs local
+To help identify what is global vs local, let's review the Memory_Storage example we're using
 ```javascript
 var memory = {
     "key": "value", //<<<---Global
@@ -283,13 +285,13 @@ var memory = {
 
 Notice that the Macro names are considered global, so you can overwrite them if necessary, so be mindful how you coordinate your information and use **.global()**
 
-All example in mem.write() apply to mem.write.global()
+All execution examples from mem.write() apply to mem.write.global()
 
 ### mem.read(key)
 
-**mem.read(_key_)** is a Promise and expects the object key you're looking for in Memory_Storage
+**mem.read(_key_)** is a Promise and expects the object key, found in the Memory_Storage script, as a parameter
 
-To make use of this, you'll need to know the key you need to find and use the .then() method to get that key's value
+To make use of this, you'll need to know the key you need to find and use the .then() method to get that key's value for later use.
 
 Let's work with the macro called "myMacro"
 
@@ -311,7 +313,7 @@ var memory = {
 }
 ```
 
-We see in storage, there is one key available to use **myLocalVar**
+We see in Memory_Storage, there is one key available to use, **myLocalVar**.
 
 Let's pull that key's value into our script for use, then update it's value using mem.write
 
@@ -320,11 +322,11 @@ import xapi from 'xapi';
 
 import { mem } from './Memory_Functions';
 
-mem.read('myLocalVar').then((value) => {
+mem.read('myLocalVar').then((value) => { //<<<-- Read myLocalVar
     console.log(value)
-    if (value !== "$3,000") {
-        mem.write('myLocalVar', '$3,000').then(() => {
-            mem.read('myLocalVar').then((otherValue) => {
+    if (value !== "$3,000") { //<<<-- Evaluate that value
+        mem.write('myLocalVar', '$3,000').then(() => { //<<<-- write a new value to myLocalVar
+            mem.read('myLocalVar').then((otherValue) => { //<<<-- Read myLocalVar again to see the change
                 console.log(otherValue)
                 console.log('I wish my bank account had a rule like this...')
             })
@@ -343,19 +345,56 @@ As mentioned under mem.write(), chaining your promises is important to the succe
 
 ### mem.read(key)._global_
 
-**mem.read.global(_key_)** is a Promise and expects the object key you're looking for in Memory_Storage
+**mem.read.global(_key_)** is a Promise and expects the object key, found in the Memory_Storage script, as a parameter
 
-Just like mem.write.global(), this will read a key at the top level of your Memory_Storage script
+Just like mem.write.global(), this will read a key at the top level of your Memory_Storage script.
 
-refer to the example in mem.read for use
+Allowing you to access information from other scripts, or other global objects available.
+
+For Example, 
+```javascript
+var memory = {
+    "key": "value",
+    "myGlobalVar": "[a-zA-Z]",
+    "myMacro": {
+        "myLocalVar": "$2,000"
+    },
+    "otherMacro": {
+        "icecream": "['chocolate', 'strawberry', 'vanilla']",
+        "pizza": "['pepperoni', 'cheese', 'bacon']"
+    },
+    "myTestMacro": {
+        "myInfo": "ABC123" //<<<-- new Information Here!
+    }
+}
+```
+Let's read all of the informatoin in "myMacro" and log it
+
+```javascript
+import xapi from 'xapi';
+
+import { mem } from './Memory_Functions';
+
+mem.read('myMacro').then((value) => { //<<<-- Read myMacro
+    console.log(value)
+  });
+
+/*
+Console will print:
+13:28:25 myMacro > '{ "myLocalVar": "$2,000" }'
+*/
+```
+See how we now get both the object and value when using.
+
+Refer to mem.read for more examples.
 
 ### mem.remove(key)
 
-**mem.remove(_key_)** is a Promise and expects the object key you're looking for in Memory_Storage
+**mem.remove(_key_)** is a Promise and expects the object key, found in the Memory_Storage script, as a parameter.
 
-mem.remove(key) allows your to remove an object from memory
+mem.remove(key) allows your to remove an object from Memory_Storage.
 
-To make use of this, you'll need to know the key you need to find and use the .then() method to get that key's value
+To make use of this, you'll need to know the key in Memory_Storage to remove it.
 
 Let's work with the macro called "otherMacro"
 
@@ -377,19 +416,19 @@ var memory = {
 }
 ```
 We have 2 objects in "otherMacro", let's remove "icecream" from this, because I'd much prefer pizza over icecream :stuck_out_tongue_closed_eyes:
-But let's also use mem.read.global() to see all the changes happening to the memory of "otherMacros"
+But let's also use the .then() along with mem.read.global() to see all the changes happening to the Memory_Storage of "otherMacros"
 
 ```javascript
-mem.read.global('otherMacro').then((value) => {
+mem.read.global('otherMacro').then((value) => { //<<<-- Read otherMacro first to log it's contents
     console.log(value)
-    mem.remove('icecream').then(()=>{
-        mem.read.global('otherMacro').then((otherValue) => {
+    mem.remove('icecream').then(()=>{ //<<<-- Remove icecream
+        mem.read.global('otherMacro').then((otherValue) => { //<<<-- Read otherMacro again to log the change
             console.log(otherValue)
         })
     })
     /*
     Console will print:
-    13:51:14 otherMacro	> { icecream: '[\'chocolate\', \'strawberry\', \'vanilla\']',
+    13:51:14 otherMacro	> { icecream: '[\'chocolate\', \'strawberry\', \'vanilla\']', 
                             pizza: '[\'pepperoni\', \'cheese\', \'bacon\']' }
     13:51:15 otherMacro	> 'WARNING: Local Object Key {"icecream" : "[\'chocolate\', \'strawberry\', \'vanilla\']"} has been deleted from Memory_Storage. Deletion occurred in script "otherMacro"'
     13:51:15 otherMacro	> { pizza: '[\'pepperoni\', \'cheese\', \'bacon\']' }
@@ -397,7 +436,7 @@ mem.read.global('otherMacro').then((value) => {
 });
 ```
 
-Notice how we get an additional console message with a warning, this is telling use we removed information from our Memory_Storage macro and makes for a great tool while troubleshooting to see if you accidentally removed the wrong information.
+Notice how we get an additional console message with a warning, this is telling use we removed information from our Memory_Storage macro which makes for a great tool while troubleshooting to see if you accidentally removed the wrong information.
 
 ### mem.remove.global(key)
 
@@ -405,7 +444,7 @@ Notice how we get an additional console message with a warning, this is telling 
 
 Just like mem.write.global(), this will remove a key at the top level of your Memory_Storage script
 
-refer to the example in mem.remove for use
+refer to the examples in mem.remove and mem.read for use
 
 ### mem.print() && mem.print.global()
 
@@ -438,6 +477,8 @@ An example log for the same macro named "otherMacro" will print the following
 
 Call these functions whenever you need a print out of your saved information.
 
+These functions are for reference and troubleshooting purposes
+
 ## Non-Exported Functions
 These functions are not exported for use, they help run a initial set-up on the Memory_Functions Script
 
@@ -448,7 +489,10 @@ These functions are not exported for use, they help run a initial set-up on the 
   * This check to see if you have a Memory_Storage script on your endpoint, if not, it will create one for you
 * importMem()
   * This check to see if any scripts outside of Memory_Functions and Memory_Storage have 
+  
   ```javascript
   import { mem } from './Memory_Functions';
   ```
+  
   applied to them, they must contain the standard ```import xapi from 'xapi';``` for this to work, else nothing will happen.
+  * importMem also relies on a configuration option found on Line 20. Refer to [Configuration Menu](#configuration-menu) for more information
