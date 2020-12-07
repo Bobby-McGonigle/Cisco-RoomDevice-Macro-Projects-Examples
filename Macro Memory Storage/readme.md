@@ -84,7 +84,7 @@ var config = {
 
 ## Things to consider
 * We're always looking for way to improve this script, if you have an idea, send it along :smiley:
-* The function getSourceScriptName(), found in Memory_Functions, **relies on crashing your script** to get the script name. It currently does cause any issues and works reliably on ce9.14 and higher. Current Date Dec 2020
+* The function getSourceScriptName(), found in Memory_Functions, **relies on crashing your script** to get the script name. It currently does **NOT** cause any issues and works reliably on ce9.14 and higher. Current Date Dec 2020
   * So far it works, but we wanted you to know. We're hoping to find a better way to have a script discover it's own name. At them moment, this is the only way :sweat_smile:
 
 ## Author(s)
