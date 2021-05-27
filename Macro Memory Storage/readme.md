@@ -30,7 +30,7 @@ For more detail on how to use these functions, please scroll to the of end of th
 * [mem.remove.global(key)](#memremoveglobalkey)
 * [mem.print()](#memprint--memprintglobal)
 * [mem.print.global()](#memprint--memprintglobal)
-* [mem.info()]()
+* [mem.info()](#meminfo)
 
 ## What You'll Need
 * A compatible Endpoint
