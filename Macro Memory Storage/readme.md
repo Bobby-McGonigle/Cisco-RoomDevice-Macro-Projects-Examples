@@ -471,6 +471,32 @@ Call these functions whenever you need a print out of your saved information.
 
 These functions are for reference and troubleshooting purposes
 
+**mem.info()**
+
+mem.info() will print out information on the script to the console. This is pre-loaded into the Memory Storage script. This information can be removed, and if it has, running this will cause an error.
+
+Example Print out
+```JSON
+"./_$Info": {
+        "Warning": "Do NOT modify this document, as other Scripts/Macros may rely on this information",
+        "AvailableFunctions": {
+            "local": [
+                "mem.read('key')",
+                "mem.write('key', 'value')",
+                "mem.remove('key')",
+                "mem.print()"
+            ],
+            "global": [
+                "mem.read.global('key')",
+                "mem.write.global('key', 'value')",
+                "mem.remove.global('key')",
+                "mem.print.global()"
+            ]
+        },
+        "Guide": "https://github.com/Bobby-McGonigle/Cisco-RoomDevice-Macro-Projects-Examples/tree/master/Macro%20Memory%20Storage"
+    }
+```
+
 ## Non-Exported Functions
 These functions are not exported for use, they help run a initial set-up on the Memory_Functions Script
 
