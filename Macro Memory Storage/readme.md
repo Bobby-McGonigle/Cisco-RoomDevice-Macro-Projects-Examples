@@ -502,7 +502,7 @@ These functions are not exported for use, they help run a initial set-up on the 
 
 * ~~getSourceScriptName()~~
   * ~~This script, which can be export if needed, is responsible for getting the name of the local script~~
-  * ~~It technically causes a crash, but as of December 2020, this is the only way for us to discover the script name``
+  * ~~It technically causes a crash, but as of December 2020, this is the only way for us to discover the script name~~
   * getSourceScriptName was replaced by ```mem.localScript = module.name```. This will be auto-imported if that setting is enabled.
 * memoryInit()
   * This checks to see if you have a Memory_Storage script on your endpoint, if not, it will create one for you
