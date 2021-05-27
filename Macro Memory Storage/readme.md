@@ -4,6 +4,12 @@
 
 This is the latest installment of Macro Memory Storage and it has been completely re-written. If you had used **MemoryStorage.js** or **MemoryStorage_V2.js** they are now in the [legacy](https://github.com/Bobby-McGonigle/Cisco-RoomDevice-Macro-Projects-Examples/tree/master/Macro%20Memory%20Storage/legacy) folder with the previous readme still contained here for reference. But you should check out this new one for sure :smirk:
 
+## Update
+* Spelling and grammar fixes
+* Replaced getSourceScriptName() with a stable method of acquiring the script name
+* Added mem.localScript variable to work with module.name
+* Added mem.Info() - This will print information about Memory Functions.
+
 ## Inspiration
 
 The need for a better and more robust version of the initial Macro Memory script.
@@ -14,7 +20,7 @@ With the enhancements of the Macro Editor in ce9.14 and Higher, we can make a mo
 
 ## Function List
 
-For more detail on how to use these functions, please scroll to the of end of this readme. Details listed under **[Function Details](#function-details)** or click on any of these hyperlinks to jump to any of these functions.
+For more detail on how to use these functions, please scroll to the of end of this readme. Details listed under **[Function Details](#function-details)** or click on any of these hyper-links to jump to any of these functions.
 
 * [mem.write(key, value)](#memwritekey-value)
 * [mem.write.global(key, value)](#memwriteglobalkey-value)
@@ -24,6 +30,7 @@ For more detail on how to use these functions, please scroll to the of end of th
 * [mem.remove.global(key)](#memremoveglobalkey)
 * [mem.print()](#memprint--memprintglobal)
 * [mem.print.global()](#memprint--memprintglobal)
+* [mem.info()]()
 
 ## What You'll Need
 * A compatible Endpoint
@@ -60,7 +67,7 @@ Once all of that has processed (it's rather quick) you should be ready to make u
 
 To manually import Memory_Functions, simply add this line of code to any of your scripts
 
-```import { mem } from ‘./Memory_Functions```
+```import { mem } from ‘./Memory_Functions; mem.localScript = module.name;```
 
 ## Configuration Menu
 Starting on line 20 of [Memory_Functions.js](https://github.com/Bobby-McGonigle/Cisco-RoomDevice-Macro-Projects-Examples/blob/master/Macro%20Memory%20Storage/Memory_Functions.js), there is a small configuration menu where you can make some changes. More to come :smiley:
@@ -72,20 +79,21 @@ var config = {
 }
 ```
 **config.storageMacro** : This is the name of the Storage Macro for Memory_Functions, feel free to rename this as you see fit.
-* Note: Once changed, your previous Storage macro and will be innaccessible to the script.
+* Note: Once changed, your previous Storage macro and will be inaccessible to the script.
 
 **config.autoImport**: This accepts the boolean values true and false. This also accepts the string "activeOnly
-* true : Will add ```import { mem } from ‘./Memory_Functions``` to any script that contains ```import xapi from ‘xapi’```
-  * Note: Once aplied to a script, it will not reverse the import when changed to false.
+* true : Will add ```import { mem } from ‘./Memory_Functions; mem.localScript = module.name;``` to any script that contains ```import xapi from ‘xapi’```
+  * Note: Once applied to a script, it will not reverse the import when changed to false.
 * false : Disables autoImport
   * Note: This will not remove any previously run imports
-* "activeOnly : Case sensitive; Will add ```import { mem } from ‘./Memory_Functions``` to any script **ACTIVE SCRIPT** that contains ```import xapi from ‘xapi’```
-  * Note: Once aplied to a script, it will not reverse the import when change to false.
+* "activeOnly : Case sensitive; Will add ```import { mem } from ‘./Memory_Functions; mem.localScript = module.name;``` to any script **ACTIVE SCRIPT** that contains ```import xapi from ‘xapi’```
+  * Note: Once applied to a script, it will not reverse the import when change to false.
 
 ## Things to consider
 * We're always looking for way to improve this script, if you have an idea, send it along :smiley:
-* The function getSourceScriptName(), found in Memory_Functions, **relies on crashing your script** to get the script name. It currently does **NOT** cause any issues and works reliably on ce9.14 and higher. Current Date Dec 2020
-  * So far it works, but we wanted you to know. We're hoping to find a better way to have a script discover it's own name. At them moment, this is the only way :sweat_smile:
+* ~~The function getSourceScriptName(), found in Memory_Functions, **relies on crashing your script** to get the script name. It currently does **NOT** cause any issues and works reliably on ce9.14 and higher. Current Date Dec 2020~~
+  * ~~So far it works, but we wanted you to know. We're hoping to find a better way to have a script discover it's own name. At them moment, this is the only way :sweat_smile:~~
+  * getSourceScriptName() has been replaced with ```mem.localScript = module.name```
 
 ## Author(s)
 * Zacharie Gignac - Original Author and Project Lead
@@ -104,7 +112,7 @@ var config = {
 
 For the purposes of these function descriptions/guide we will be referencing the below **Memory_Storage** example
 
-Feel free to copy thse contents into your **Memory_Storage** script and follow along.
+Feel free to copy these contents into your **Memory_Storage** script and follow along.
 
 ```javascript
 var memory = {
@@ -131,6 +139,7 @@ All functions under ```var mem``` are exported. These are:
 * mem.remove.global(key)
 * mem.print()
 * mem.print.global()
+* mem.info()
 
 ### mem.write(key, value)
 
@@ -145,7 +154,7 @@ In this macro, let's write a new piece of information using mem.write
 ```javascript
 import xapi from 'xapi';
 
-import { mem } from './Memory_Functions';
+import { mem } from './Memory_Functions'; mem.localScript = module.name;
 
 mem.write('myInfo', 'ABC123')
 ```
@@ -182,7 +191,7 @@ For example
 ```javascript
 import xapi from 'xapi';
 
-import { mem } from './Memory_Functions';
+import { mem } from './Memory_Functions'; mem.localScript = module.name;
 
 var myNestedObject = { //<<<-- Declare an object
     "newObject" : "Hello from New Object"
@@ -216,7 +225,7 @@ For example
 ```javascript
 import xapi from 'xapi';
 
-import { mem } from './Memory_Functions';
+import { mem } from './Memory_Functions'; mem.localScript = module.name;
 
 var myNestedObject = { //<<<-- Declare an object
     "newObject" : "Hello from New Object",
@@ -242,7 +251,7 @@ mem.write('myNestedObject', myNestedObject).then(()=>{ //<<<-- Write that first 
 Though **Style A** is preferred, **Style B** may be a necessary alternative to write depending on your use case.
 
 ## Before we move on
-Most of the other functions we'll cover makes use of the same principles detailed in mem.write(); for that, I won't be going into as much depth in the remaining examples to avoid excessive reptition :smiley:
+Most of the other functions we'll cover makes use of the same principles detailed in mem.write(); for that, I won't be going into as much depth in the remaining examples to avoid excessive repetition :smiley:
 
 ### mem.write._global_('key', 'value)
 
@@ -303,7 +312,7 @@ Let's pull that key's value into our script for use, then update it's value usin
 ```javascript
 import xapi from 'xapi';
 
-import { mem } from './Memory_Functions';
+import { mem } from './Memory_Functions'; mem.localScript = module.name;
 
 mem.read('myLocalVar').then((value) => { //<<<-- Read myLocalVar
     console.log(value)
@@ -356,7 +365,7 @@ Let's read all of the informatoin in "myMacro" and log it
 ```javascript
 import xapi from 'xapi';
 
-import { mem } from './Memory_Functions';
+import { mem } from './Memory_Functions'; mem.localScript = module.name;
 
 mem.read('myMacro').then((value) => { //<<<-- Read myMacro
     console.log(value)
@@ -465,16 +474,17 @@ These functions are for reference and troubleshooting purposes
 ## Non-Exported Functions
 These functions are not exported for use, they help run a initial set-up on the Memory_Functions Script
 
-* getSourceScriptName()
-  * This script, which can be export if needed, is responsible for getting the name of the local script
-  * It technically causes a crash, but as of December 2020, this is the only way for us to discover the script name
+* ~~getSourceScriptName()~~
+  * ~~This script, which can be export if needed, is responsible for getting the name of the local script~~
+  * ~~It technically causes a crash, but as of December 2020, this is the only way for us to discover the script name``
+  * getSourceScriptName was replaced by ```mem.localScript = module.name```. This will be auto-imported if that setting is enabled.
 * memoryInit()
   * This checks to see if you have a Memory_Storage script on your endpoint, if not, it will create one for you
 * importMem()
   * This checks to see if any scripts outside of Memory_Functions and Memory_Storage have 
   
   ```javascript
-  import { mem } from './Memory_Functions';
+  import { mem } from './Memory_Functions'; mem.localScript = module.name;
   ```
   
   applied to them, they must contain the standard ```import xapi from 'xapi';``` for this to work, else nothing will happen.
