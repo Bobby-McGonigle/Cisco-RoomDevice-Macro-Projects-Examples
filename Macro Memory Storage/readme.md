@@ -471,7 +471,7 @@ Call these functions whenever you need a print out of your saved information.
 
 These functions are for reference and troubleshooting purposes
 
-**mem.info()**
+### mem.info()
 
 mem.info() will print out information on the script to the console. This is pre-loaded into the Memory Storage script. This information can be removed, and if it has, running this will cause an error.
 
