@@ -48,7 +48,7 @@ The scripts have been split for readability and to leverage a configuration sche
 ## Getting Started
 [download this](files/file.csv)
 
-<a href="/Bobby-McGonigle/Cisco-RoomDevice-Macro-Projects-Examples/raw/master/Join%20Zoom/Join%20Zoom%20and%20Zoom%20Tools/JoinZoom_4-1-0.zip" id="raw-url" role="button" data-view-component="true" class="btn-sm btn BtnGroup-item">Download</a>
+<a href="/Join%20Zoom/Join%20Zoom%20and%20Zoom%20Tools/JoinZoom_4-1-0.zip" id="raw-url" role="button" data-view-component="true" class="btn-sm btn BtnGroup-item">Download</a>
 
 ## Configuration Option
 
