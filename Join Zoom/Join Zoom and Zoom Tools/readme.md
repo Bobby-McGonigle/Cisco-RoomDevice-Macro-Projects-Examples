@@ -46,6 +46,7 @@ Join Zoom version 4-1-0 is split into 5 scripts
 The scripts have been split for readability and to leverage a configuration scheme inside the endpoint.
 
 ## Getting Started
+<a href="/" download="test.txt">download this</a>
 
 ## Configuration Option
 
