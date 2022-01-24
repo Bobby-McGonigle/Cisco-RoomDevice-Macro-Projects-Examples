@@ -15,7 +15,7 @@
  *  https://github.com/Bobby-McGonigle/Cisco-RoomDevice-Macro-Projects-Examples/tree/master/Macro%20Memory%20Storage
  */
 
-import xapi from 'xapi';
+ import xapi from 'xapi';
 
  const config = {
    "storageMacro": "Memory_Storage", //Name for Storage Macro
